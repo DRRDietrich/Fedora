@@ -1,6 +1,6 @@
 # Fedora
 
-Kickstart installation of Fedora 31 with NVIDIA drivers and other useful tools.
+Kickstart installation of Fedora 31 with useful packages and RPMFusion, negativo17 nvidia, google-chrome, dracut-crypt-ssh, keybase and riot repositories.
 
 ### Grub Options
 
