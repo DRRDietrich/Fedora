@@ -122,8 +122,9 @@ mesa*
 neofetch
 nextcloud-client
 nmap
-nvidia-driver
-nvidia-settings
+# Error in POSTIN scriptlet in rpm package nvidia-kmod-common
+# nvidia-driver
+# nvidia-settings
 ocl-icd
 octave
 opencl-*
@@ -143,8 +144,9 @@ riot
 screenfetch
 simplescreenrecorder
 testdisk
-texlive-scheme-full
-texworks
+# Too much RPMs for testing
+# texlive-scheme-full
+# texworks
 thunderbird
 thunderbird-enigmail
 transmission
