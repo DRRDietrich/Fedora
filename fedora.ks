@@ -145,6 +145,7 @@ remmina
 R
 riot
 screenfetch
+seahorse
 simplescreenrecorder
 testdisk
 # Too much RPMs for testing
