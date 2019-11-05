@@ -18,7 +18,7 @@ repo --name=Riot --baseurl="https://copr-be.cloud.fedoraproject.org/results/taw/
 # Use graphical install
 graphical
 # Keyboard layouts
-keyboard --xlayouts='us (mac)','de (mac)' --switch=grp:alt_shift_toggle
+keyboard --xlayouts='us (mac)','de (mac)'
 # System language
 lang de_DE.UTF-8
 
@@ -60,6 +60,8 @@ bijiben
 blivet-gui
 cachefilesd
 calibre
+certbot
+certbot-apache
 clementine
 cockpit
 cockpit-composer
@@ -76,6 +78,7 @@ digikam
 distribution-gpg-keys
 dnf-plugin-system-upgrade
 evince
+evolution
 fdupes
 fedora-release-workstation
 filezilla
