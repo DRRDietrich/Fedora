@@ -191,6 +191,8 @@ rpm --import https://keybase.io/toddwarner/key.asc
 dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
 # Packages
 dnf -y install nvidia-driver nvidia-settings riot rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted --refresh
+# Signal Desktop as Flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub org.signal.Signal
 %end
 
 # Reboot After Installation
