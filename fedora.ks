@@ -132,6 +132,7 @@ libreoffice
 libtool
 libvirt
 mesa*
+modem-manager-gui
 neofetch
 nextcloud-client
 nmap
