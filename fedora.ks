@@ -134,6 +134,7 @@ libvirt
 mesa*
 modem-manager-gui
 neofetch
+NetworkManager-*
 nextcloud-client
 nmap
 ocl-icd
