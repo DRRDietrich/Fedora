@@ -127,6 +127,12 @@ kernel-devel
 keybase
 langpacks-de
 langpacks-en
+# Blu-ray AACS Library
+libaacs
+# Blu-ray BD+ Library
+libbdplus
+# Blu-ray Library
+libbluray-utils
 libgnome-keyring
 libimobiledevice-utils
 libreoffice
