@@ -104,6 +104,7 @@ git-all
 gnome-calendar
 gnome-clocks
 gnome-contacts
+gnome-firmware
 gnome-maps
 gnome-online-accounts
 gnome-terminal
