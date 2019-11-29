@@ -63,17 +63,23 @@ akmod-VirtualBox
 alacarte
 audacity
 autoconf
+# if unnecessary, please comment out.
 autofs
 automake
 backintime-qt
 baobab
 bijiben
 blivet-gui
+# if unnecessary, please comment out.
 cachefilesd
 calibre
+# if unnecessary, please comment out.
 certbot
 certbot-apache
+# alternative web browser
+chromium
 clementine
+# if unnecessary, please comment out.
 cockpit
 cockpit-composer
 cockpit-dashboard
@@ -83,6 +89,7 @@ cockpit-packagekit
 cockpit-storaged
 cockpit-system
 colordiff
+# needs a lot of space. if unnecessary, please comment out.
 darktable
 diffuse
 digikam
@@ -123,6 +130,7 @@ iftop
 inkscape
 java-openjdk
 keepassxc
+# needed by VirtualBox
 kernel-devel
 keybase
 langpacks-de
@@ -139,12 +147,14 @@ libreoffice
 libtool
 libvirt
 mesa*
+# if unnecessary, please comment out.
 modem-manager-gui
 neofetch
 NetworkManager-*
 nextcloud-client
 nmap
 ocl-icd
+# if unnecessary, please comment out.
 octave
 opencl-*
 openshot
@@ -154,16 +164,21 @@ p7zip-gui
 p7zip-plugins
 pam-u2f
 pamu2fcfg
+# if unnecessary, please comment out.
 postgresql-server
 powertop
 qemu
 remmina
+# if unnecessary, please comment out.
 R
+# deprecated, will be replaced by keybase
 riot
 screenfetch
 seahorse
 simplescreenrecorder
+# data revocery tools
 testdisk
+# needs a lot of space. if unnecessary, please comment out.
 texlive-scheme-full
 texworks
 thunderbird
