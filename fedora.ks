@@ -95,6 +95,8 @@ diffuse
 digikam
 distribution-gpg-keys
 dnf-plugin-system-upgrade
+# Network-Monitoring
+etherape
 evince
 evolution
 fdupes
@@ -151,6 +153,8 @@ mesa*
 modem-manager-gui
 neofetch
 NetworkManager-*
+# Network-Monitoring
+nethogs
 nextcloud-client
 nmap
 ocl-icd
