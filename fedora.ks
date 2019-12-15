@@ -94,6 +94,7 @@ darktable
 diffuse
 digikam
 distribution-gpg-keys
+dnf-automatic
 dnf-plugin-system-upgrade
 # Network-Monitoring
 etherape
