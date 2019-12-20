@@ -189,6 +189,8 @@ texworks
 thunderbird
 thunderbird-enigmail
 transmission
+# DNS
+unbound
 vim-enhanced
 VirtualBox
 virtualbox-guest-additions
@@ -222,6 +224,103 @@ dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
 dnf -y install nvidia-driver nvidia-settings riot rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted --refresh
 # Signal Desktop as Flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub org.signal.Signal
+# unbound
+echo -n '# Please add a name and the ID from nextdns.io
+NAME=
+ID=
+server:
+	verbosity: 1
+	statistics-interval: 0
+	statistics-cumulative: no
+	extended-statistics: yes
+	num-threads: 4
+	interface: 127.0.0.1
+	interface: ::1
+	interface-automatic: no
+	port: 53
+	outgoing-port-permit: 32768-60999
+	outgoing-port-avoid: 0-32767
+	so-reuseport: yes
+	ip-transparent: yes
+	max-udp-size: 3072
+	edns-tcp-keepalive: yes
+	access-control: 127.0.0.0/8 allow
+	access-control: ::1 allow
+	access-control: 192.168.188.0/8 allow
+	chroot: ""
+	username: "unbound"
+	directory: "/etc/unbound"
+	log-time-ascii: yes
+	pidfile: "/var/run/unbound/unbound.pid"
+	harden-glue: yes
+	harden-dnssec-stripped: yes
+	harden-below-nxdomain: yes
+	harden-referral-path: yes
+	qname-minimisation: yes
+	aggressive-nsec: yes
+	unwanted-reply-threshold: 10000000
+	prefetch: yes
+	prefetch-key: yes
+	deny-any: yes
+	rrset-roundrobin: yes
+	minimal-responses: yes
+	module-config: "ipsecmod validator iterator"
+	trust-anchor-signaling: yes
+	root-key-sentinel: yes
+	trusted-keys-file: /etc/unbound/keys.d/*.key
+	auto-trust-anchor-file: "/var/lib/unbound/root.key"
+	domain-insecure: zone 
+	val-clean-additional: yes
+	val-permissive-mode: no
+	serve-expired: yes
+	serve-expired-ttl: 14400
+	val-log-level: 1
+	include: /etc/unbound/local.d/*.conf
+	tls-cert-bundle: "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"
+	ipsecmod-enabled: no
+	ipsecmod-hook:/usr/libexec/ipsec/_unbound-hook
+python:
+remote-control:
+	control-enable: yes
+	control-use-cert: "no"
+	server-key-file: "/etc/unbound/unbound_server.key"
+	server-cert-file: "/etc/unbound/unbound_server.pem"
+	control-key-file: "/etc/unbound/unbound_control.key"
+	control-cert-file: "/etc/unbound/unbound_control.pem"
+
+include: /etc/unbound/conf.d/*.conf
+
+forward-zone:
+  name: "."
+  forward-tls-upstream: yes
+  forward-addr: 45.90.28.0#$NAME-$ID.dns1.nextdns.io
+  forward-addr: 2a07:a8c0::#$NAME-$ID.dns1.nextdns.io
+  forward-addr: 45.90.30.0#$NAME-$ID.dns2.nextdns.io
+  forward-addr: 2a07:a8c1::#$NAME-$ID.dns2.nextdns.io
+
+auth-zone:
+	name: "."
+	for-downstream: no
+	for-upstream: yes
+	fallback-enabled: yes
+	master: 199.9.14.201         # b.root-servers.net
+	master: 192.33.4.12          # c.root-servers.net
+	master: 199.7.91.13          # d.root-servers.net
+	master: 192.5.5.241          # f.root-servers.net
+	master: 192.112.36.4         # g.root-servers.net
+	master: 193.0.14.129         # k.root-servers.net
+	master: 192.0.47.132         # xfr.cjr.dns.icann.org
+	master: 192.0.32.132         # xfr.lax.dns.icann.org
+	master: 2001:500:200::b      # b.root-servers.net
+	master: 2001:500:2::c        # c.root-servers.net
+	master: 2001:500:2d::d       # d.root-servers.net
+	master: 2001:500:2f::f       # f.root-servers.net
+	master: 2001:500:12::d0d     # g.root-servers.net
+	master: 2001:7fd::1          # k.root-servers.net
+	master: 2620:0:2830:202::132 # xfr.cjr.dns.icann.org
+	master: 2620:0:2d0:202::132  # xfr.lax.dns.icann.org
+' > /etc/unbound/unbound.conf
+systemctl enable --now unbound
 %end
 
 # Reboot After Installation
