@@ -321,6 +321,31 @@ auth-zone:
 	master: 2620:0:2d0:202::132  # xfr.lax.dns.icann.org
 ' > /etc/unbound/unbound.conf
 systemctl enable --now unbound
+# dnf-automatic security upgrades
+# timer configuration: /etc/systemd/system/multi-user.target.wants/dnf-automatic.timer
+echo -n '[commands]
+upgrade_type = security
+random_sleep = 0
+download_updates = yes
+apply_updates = yes
+
+[emitters]
+emit_via = stdio
+
+[email]
+email_from = dnf@localhost
+email_to = root@localhost
+email_host = localhost
+
+[command]
+
+[command_email]
+email_from = dnf@localhost
+email_to = root@localhost
+
+[base]
+debuglevel = 1' > /etc/dnf/automatic.conf;
+systemctl enable --now dnf-automatic.timer
 %end
 
 # Reboot After Installation
