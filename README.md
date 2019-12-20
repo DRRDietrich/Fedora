@@ -1,6 +1,6 @@
 # Fedora
 
-Kickstart installation of Fedora 31 with useful packages and RPMFusion, negativo17 nvidia, google-chrome, dracut-crypt-ssh, keybase and riot repositories.
+Kickstart installation of Fedora 31 with useful packages, DNSoverTLS (NextDNS.io + unbound) and RPMFusion, negativo17 nvidia, google-chrome, dracut-crypt-ssh, keybase and riot repositories.
 
 ### Download Fedora 31 netinst ISO 
 
