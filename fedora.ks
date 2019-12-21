@@ -91,6 +91,8 @@ cockpit-system
 colordiff
 # needs a lot of space. if unnecessary, please comment out.
 darktable
+# necessary for nm-connection-editor
+dbus-x11
 diffuse
 digikam
 distribution-gpg-keys
