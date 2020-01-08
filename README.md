@@ -13,3 +13,7 @@ Press Strg + e to edit the grub options and append the following option:
 inst.ks=https://raw.githubusercontent.com/DRRDietrich/Fedora/master/fedora.ks
 
 Press Strg + x to start the installer with kickstart configuration.
+
+## Legacy Code
+
+O++S++I+CEMV+PS++D++
