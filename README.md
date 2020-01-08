@@ -14,6 +14,6 @@ inst.ks=https://raw.githubusercontent.com/DRRDietrich/Fedora/master/fedora.ks
 
 Press Strg + x to start the installer with kickstart configuration.
 
-## Legacy Code
+## Legacy Geek Code
 
 O++S++I+CEMV+PS++D++
