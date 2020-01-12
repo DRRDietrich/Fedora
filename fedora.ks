@@ -183,6 +183,9 @@ riot
 screenfetch
 seahorse
 simplescreenrecorder
+# btrfs snapshots (https://dustymabe.com/2019/01/06/fedora-btrfs-snapper---the-fedora-29-edition/)
+snapper
+python3-dnf-plugins-extras-snapper
 # data revocery tools
 testdisk
 # needs a lot of space. if unnecessary, please comment out.
