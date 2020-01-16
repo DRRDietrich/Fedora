@@ -156,6 +156,8 @@ mesa*
 modem-manager-gui
 neofetch
 NetworkManager-*
+# PCP Monitoring on localhost:19999, https://github.com/netdata/netdata
+netdata
 # Network-Monitoring
 nethogs
 nextcloud-client
