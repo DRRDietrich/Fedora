@@ -187,6 +187,8 @@ seahorse
 simplescreenrecorder
 # btrfs snapshots (https://dustymabe.com/2019/01/06/fedora-btrfs-snapper---the-fedora-29-edition/)
 snapper
+# Shamir's secret sharing scheme
+ssss
 python3-dnf-plugins-extras-snapper
 # data revocery tools
 testdisk
