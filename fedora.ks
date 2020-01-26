@@ -152,6 +152,9 @@ libreoffice
 libtool
 libvirt
 mesa*
+# music on console (needs a config-file, so run the following command)
+# touch timidity.cfg
+moc
 # if unnecessary, please comment out.
 modem-manager-gui
 neofetch
