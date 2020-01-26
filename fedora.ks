@@ -153,7 +153,7 @@ libtool
 libvirt
 mesa*
 # music on console (needs a config-file, so run the following command)
-# touch timidity.cfg
+# echo "TiMidity_Config = /etc/timidity.cfg" >> .moc/config
 moc
 # if unnecessary, please comment out.
 modem-manager-gui
