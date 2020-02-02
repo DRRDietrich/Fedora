@@ -192,9 +192,8 @@ simplescreenrecorder
 snapper
 # Shamir's secret sharing scheme
 ssss
-# P2P Synchronisation
+# P2P Synchronisation (https://syncthing.net/downloads/)
 syncthing
-https://syncthing.net/downloads/
 python3-dnf-plugins-extras-snapper
 # data revocery tools
 testdisk
