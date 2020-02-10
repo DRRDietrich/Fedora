@@ -177,7 +177,6 @@ p7zip-plugins
 pam-u2f
 pamu2fcfg
 # smart card support, like https://en.wikipedia.org/wiki/OpenPGP_card
-# users must be added to the scard group
 pcsc-lite
 # if unnecessary, please comment out.
 postgresql-server
