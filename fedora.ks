@@ -59,7 +59,6 @@ selinux --permissive
 @office
 @sound-and-video
 @system-tools
-akmod-VirtualBox
 alacarte
 audacity
 autoconf
@@ -135,8 +134,6 @@ iftop
 inkscape
 java-openjdk
 keepassxc
-# needed by VirtualBox
-kernel-devel
 keybase
 langpacks-de
 langpacks-en
@@ -208,9 +205,6 @@ transmission
 # DNS
 unbound
 vim-enhanced
-VirtualBox
-virtualbox-guest-additions
-virtualbox-guest-additions-ogl
 virt-manager
 vlc
 vulkan*
