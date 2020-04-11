@@ -13,7 +13,6 @@ repo --name=rpmfusion-nonfree-updates --mirrorlist="https://mirrors.rpmfusion.or
 repo --name=rpmfusion-nonfree-tainted --mirrorlist="https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-31&arch=x86_64"
 # Negativo17 NVIDIA/CUDA
 repo --name=negativo17 --baseurl="https://negativo17.org/repos/nvidia/fedora-31/x86_64/"
-repo --name=google-chrome --baseurl="http://dl.google.com/linux/chrome/rpm/stable/x86_64"
 # Secure Messenger
 repo --name=keybase --baseurl="http://prerelease.keybase.io/rpm/x86_64"
 repo --name=riot --baseurl="https://copr-be.cloud.fedoraproject.org/results/taw/Riot/fedora-31-x86_64/"
@@ -76,7 +75,8 @@ calibre
 certbot
 certbot-apache
 # alternative web browser
-chromium
+# chromium with VAAPI and Widevine DRM module
+chromium-freeworld
 clementine
 # if unnecessary, please comment out.
 cockpit
@@ -147,6 +147,10 @@ libgnome-keyring
 libimobiledevice-utils
 libreoffice
 libtool
+# VAAPI driver and tools
+libva-intel*
+libva-utils
+libva-vdpau-driver
 libvirt
 mesa*
 # music on console (needs a config-file, so run the following command)
@@ -176,13 +180,12 @@ pamu2fcfg
 # smart card support, like https://en.wikipedia.org/wiki/OpenPGP_card
 pcsc-lite
 # if unnecessary, please comment out.
-postgresql-server
+# postgresql-server
 powertop
 qemu
 remmina
 # if unnecessary, please comment out.
 R
-# deprecated, will be replaced by keybase
 riot
 screenfetch
 seahorse
@@ -195,7 +198,7 @@ ssss
 syncthing
 python3-dnf-plugins-extras-snapper
 # data revocery tools
-testdisk
+# testdisk
 # needs a lot of space. if unnecessary, please comment out.
 texlive-scheme-full
 texworks
