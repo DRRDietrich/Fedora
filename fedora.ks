@@ -166,7 +166,10 @@ netdata
 # Network-Monitoring
 nethogs
 nextcloud-client
+# Network exploration tool and security scanner
 nmap
+# Simple utility for network information
+nutty
 ocl-icd
 # if unnecessary, please comment out.
 octave
