@@ -134,6 +134,8 @@ icedtea-web
 iftop
 inkscape
 java-openjdk
+# Video Editing
+kdenlive
 keepassxc
 keybase
 langpacks-de
@@ -174,8 +176,9 @@ ocl-icd
 # if unnecessary, please comment out.
 octave
 opencl-*
-openshot
-openshot-lang
+# replaced by kdenlive
+# openshot
+# openshot-lang
 p7zip
 p7zip-gui
 p7zip-plugins
@@ -198,6 +201,8 @@ simplescreenrecorder
 snapper
 # Shamir's secret sharing scheme
 ssss
+# Linux System Optimizer and Monitor
+stacer
 # P2P Synchronisation (https://syncthing.net/downloads/)
 syncthing
 python3-dnf-plugins-extras-snapper
