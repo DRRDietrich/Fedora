@@ -211,6 +211,8 @@ python3-dnf-plugins-extras-snapper
 # needs a lot of space. if unnecessary, please comment out.
 texlive-scheme-full
 texworks
+# replaced xrdp
+tigervnc-server
 thunderbird
 thunderbird-enigmail
 transmission
@@ -220,7 +222,6 @@ vim-enhanced
 virt-manager
 vlc
 vulkan*
-xrdp
 youtube-dl
 %end
 
