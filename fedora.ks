@@ -110,6 +110,8 @@ ffmpeg
 flatpak
 freerdp
 fslint
+# beautiful mail client, unfortunately without PGP support so far
+geary
 gedit
 gimp
 git-all
