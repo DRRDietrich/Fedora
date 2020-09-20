@@ -69,6 +69,8 @@ backintime-qt
 baobab
 bijiben
 blivet-gui
+# very efficient tool for encrypted, deduplicated, optionally append-only remote backups.
+borgbackup
 # if unnecessary, please comment out.
 cachefilesd
 calibre
