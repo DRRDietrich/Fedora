@@ -59,6 +59,12 @@ selinux --permissive
 @office
 @sound-and-video
 @system-tools
+
+# CD/DVD/BD
+ddrescue
+dvdisaster
+
+# All Other
 alacarte
 audacity
 autoconf
