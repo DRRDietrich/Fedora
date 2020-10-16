@@ -61,8 +61,14 @@ selinux --permissive
 @system-tools
 
 # CD/DVD/BD
+# GNU ddrescue is a data recovery tool. It copies data from one file or block device (hard disk, CD-ROM, etc.) to another, trying hard to rescue data in case of read errors.
 ddrescue
+# Make a disc image or burn the disc: this is left to tools like mkisofs and dvd+rw-tools.
+dvdauthor
+# dvdisaster is a computer program aimed to enhance data survivability on optical discs by creating error detection and correction data, which is used for data recovery. dvdisaster works exclusively at the image level. This program can be used either to generate Error-Correcting Code (ECC) data from an existing media or to augment an ISO image with ECC data prior to being written onto a medium.
 dvdisaster
+# GNU VCDImager is a full-featured mastering suite for authoring, disassembling and analyzing Video CDs and Super Video CDs.
+vcdimager
 
 # All Other
 alacarte
