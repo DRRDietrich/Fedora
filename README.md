@@ -1,10 +1,10 @@
 # Fedora
 
-Kickstart installation of Fedora 32 with useful packages, DNSoverTLS (NextDNS.io + unbound) and RPMFusion, negativo17 nvidia, google-chrome, dracut-crypt-ssh, keybase and riot repositories.
+Kickstart installation of Fedora 33 with useful packages, DNSoverTLS (NextDNS.io + unbound) and RPMFusion, negativo17 nvidia, google-chrome, dracut-crypt-ssh, keybase and element repositories.
 
-### Download Fedora 32 netinst ISO 
+### Download Fedora 33 netinst ISO 
 
-https://download.fedoraproject.org/pub/fedora/linux/releases/32/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-32-1.6.iso
+https://download.fedoraproject.org/pub/fedora/linux/releases/33/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-33-1.2.iso
 
 ### Grub Options
 
