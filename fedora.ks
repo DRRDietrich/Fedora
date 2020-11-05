@@ -142,7 +142,8 @@ gnome-tweaks
 gnome-usage
 gnome-weather
 gparted
-gstreamer1*
+# Issue 3
+# gstreamer1*
 gthumb
 HandBrake
 HandBrake-gui
