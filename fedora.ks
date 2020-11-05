@@ -107,7 +107,8 @@ colordiff
 darktable
 # necessary for nm-connection-editor
 dbus-x11
-diffuse
+# missing package
+# diffuse
 digikam
 distribution-gpg-keys
 dnf-automatic
@@ -123,7 +124,8 @@ firefox
 ffmpeg
 flatpak
 freerdp
-fslint
+# missing package
+# fslint
 # beautiful mail client, unfortunately without PGP support so far
 geary
 gedit
