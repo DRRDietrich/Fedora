@@ -116,6 +116,7 @@ dnf-plugin-system-upgrade
 etherape
 evince
 evolution
+exfat-utils
 fdupes
 fedora-release-workstation
 filezilla
