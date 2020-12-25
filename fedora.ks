@@ -207,6 +207,9 @@ pamu2fcfg
 pcsc-lite
 # if unnecessary, please comment out.
 # postgresql-server
+# music tagger
+picard
+chromaprint-tools
 powertop
 qemu
 remmina
