@@ -166,6 +166,9 @@ libbdplus
 # Blu-ray Library
 libbluray-utils
 libgnome-keyring
+# .heif, .heic support
+libheif
+# iOS support
 libimobiledevice-utils
 libreoffice
 libtool
