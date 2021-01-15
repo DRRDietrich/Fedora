@@ -157,6 +157,8 @@ java-openjdk
 kdenlive
 keepassxc
 keybase
+# Efficient KDE ID3 tag editor (see picard)
+kid3
 langpacks-de
 langpacks-en
 # Blu-ray AACS Library
@@ -208,10 +210,10 @@ pam-u2f
 pamu2fcfg
 # smart card support, like https://en.wikipedia.org/wiki/OpenPGP_card
 pcsc-lite
+# cross-platform music tagger written in Python, see kid3
+picard
 # if unnecessary, please comment out.
 # postgresql-server
-# music tagger
-picard
 chromaprint-tools
 powertop
 qemu
