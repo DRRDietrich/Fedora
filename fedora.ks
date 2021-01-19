@@ -220,6 +220,8 @@ qemu
 remmina
 # if unnecessary, please comment out.
 R
+# tool for re-ptying programs
+reptyr
 riot
 screenfetch
 seahorse
