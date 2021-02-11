@@ -1,6 +1,6 @@
 # Fedora
 
-Kickstart installation of Fedora 33 with useful packages, DNSoverTLS (NextDNS.io + unbound) and RPMFusion, negativo17 nvidia, google-chrome, dracut-crypt-ssh, keybase and element repositories.
+Kickstart installation of Fedora 33 with useful packages and RPMFusion, negativo17 nvidia, dracut-crypt-ssh, keybase and element repositories.
 
 ### Download Fedora 33 netinst ISO 
 
