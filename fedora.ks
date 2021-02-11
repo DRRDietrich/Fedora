@@ -26,7 +26,7 @@ lang de_DE.UTF-8
 
 # Network information
 network  --bootproto=dhcp --device=enp3s0 --ipv6=auto --activate
-network  --hostname=fedora32
+network  --hostname=fedora33
 # X Window System configuration information
 # xconfig --defaultdesktop GNOME --startxonboot
 # System services
@@ -47,7 +47,9 @@ timezone Europe/Berlin --isUtc --ntpservers=0.pool.ntp.org,1.pool.ntp.org,2.pool
 # sshpw --username root --sshkey "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM2uNvCh4aHbk8v/Fty9inxQLpda4z7Vb16Dbn24zTfm" "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDrjDqSVdz/vearombs3vomFY+l3VwAesd2BBfQZK51BekjZJlu4Ac6I2w0adf+vXBHMJULluG0Xh21eL0PF2vWkZ6i4yXGcXd/Zdb40HWsFeryKlaWYaLdnjbXKlu9TYkLtNO6le7Oy+BepydzfkPCjepaeHtm/zi/5SxZ+sHfEzCZclf8aYH1yEMGJIMJqJ96rLxfFBmH1RZThq2F7aIObA/sNySrcDZFFOv9i7Kqohqz8kzJwiARCpThBa+jj/3qWd1VyTRk7Sgk0bcgRSZ/zbhkCYGQ5UUr8CxEggvZGvfL7GD4Fb8gUOo4kZe2r5Y6L568BPuGwdfFtN95MJ"
 
 # SELinux is enabled, but only logs things that would be denied in enforcing mode.
-selinux --permissive
+# selinux --permissive
+# No SELinux policy is loaded.
+selinux --disabled
 
 %packages
 @^workstation-product-environment
@@ -59,201 +61,183 @@ selinux --permissive
 @sound-and-video
 @system-tools
 
-# CD/DVD/BD
-# GNU ddrescue is a data recovery tool. It copies data from one file or block device (hard disk, CD-ROM, etc.) to another, trying hard to rescue data in case of read errors.
-ddrescue
-# Make a disc image or burn the disc: this is left to tools like mkisofs and dvd+rw-tools.
-dvdauthor
-# dvdisaster is a computer program aimed to enhance data survivability on optical discs by creating error detection and correction data, which is used for data recovery. dvdisaster works exclusively at the image level. This program can be used either to generate Error-Correcting Code (ECC) data from an existing media or to augment an ISO image with ECC data prior to being written onto a medium.
-dvdisaster
-# GNU VCDImager is a full-featured mastering suite for authoring, disassembling and analyzing Video CDs and Super Video CDs.
-vcdimager
+### Gnome
+alacarte          # Menu editor for the GNOME desktop
+gedit             # Text editor for the GNOME desktop
+gnome-books       # E-Book Manager
+gnome-calendar    # Simple and beautiful calendar application designed to fit GNOME 3
+gnome-clocks      # Clock application designed for GNOME 3
+gnome-contacts    # Contacts manager for GNOME
+gnome-firmware    # Install firmware on devices
+gnome-maps        # Map application for GNOME
+gnome-online-accounts # Single sign-on framework for GNOME
+gnome-terminal    # Terminal emulator for GNOME
+gnome-todo        # Personal task manager for GNOME
+gnome-tweaks      # Customize advanced GNOME 3 options
+gnome-usage       # A GNOME app to view information about use of system resources
+gnome-weather     # A weather application for GNOME
+gparted           # Gnome Partition Editor
+seahorse          # A GNOME application for managing encryption keys
+seahorse-nautilus # PGP encryption and signing for nautilus
+seahorse-sharing  # Sharing of PGP public keys via DNS-SD and HKP
+# geary           # beautiful mail client, unfortunately without PGP support so far
+
+### Essential Tools
+baobab        # A graphical directory tree analyzer
+blivet-gui    # Tool for data storage configuration
+dbus-x11      # necessary for nm-connection-editor
+distribution-gpg-keys # GPG keys of various Linux distributions
+dnf-automatic # Package manager - automated upgrades
+dnf-plugin-system-upgrade # System Upgrade Plugin for DNF
+exfat-utils   # Utilities for exFAT file system
+fdupes        # Finds duplicate files in a given set of directories
+fedora-release-workstation # Base package for Fedora Workstation-specific default configurations
+flatpak       # Application deployment framework for desktop apps
+keepassxc     # Cross-platform password manager
+langpacks-de  # German langpacks meta-package
+langpacks-en  # English langpacks meta-package
+libgnome-keyring # Framework for managing passwords and other secrets
+libheif                # .heif, .heic support
+libimobiledevice-utils # iOS support
+neofetch      # CLI system information tool written in Bash
+# screenfetch # like neofetch, but not as nice as neofetch, but with disk usage
+nextcloud-client # The Nextcloud Client
+p7zip         # Very high compression ratio file archiver
+p7zip-gui     # 7zG - 7-Zip GUI version
+p7zip-plugins # Additional plugins for p7zip
+pam-u2f       # Implements PAM authentication over U2F
+pamu2fcfg     # Configures PAM authentication over U2F
+pcsc-lite     # PC/SC Lite smart card framework and applications, like https://en.wikipedia.org/wiki/OpenPGP_card
+reptyr        # Attach a running process to a new terminal
+vim-enhanced  # A version of the VIM editor which includes recent enhancements
+# distribution-gpg-keys-copr # GPG keys for Copr projects
+# fslint      # deprecated package # replaced by czkawka_gui # https://github.com/qarmin/czkawka
+
+### Internet
+# chromium           # A WebKit (Blink) powered web browser
+chromium-freeworld   # Chromium built with all freeworld codecs and VA-API support
+element              # A decentralized, secure messaging client for collaborative group communication (Riot)
+filezilla            # FTP, FTPS and SFTP client
+firefox              # Mozilla Firefox Web browser
+freerdp              # Free implementation of the Remote Desktop Protocol (RDP)
+keybase              # The Keybase Go client, filesystem, and GUI
+remmina              # Remote Desktop Client
+thunderbird          # Mozilla Thunderbird mail/newsgroup client
+thunderbird-enigmail # Authentication and encryption extension for Mozilla Thunderbird
+transmission         # A lightweight GTK+ BitTorrent client
+# tigervnc-server    # A TigerVNC server
+# xrdp               # Open source remote desktop protocol (RDP) server
+
+### Multimedia
+audacity      # Multitrack audio editor
+# audacity-freeworld # Multitrack audio editor WITH mp3 support
+chromaprint-tools    # Chromaprint audio fingerprinting tools
+clementine    # A music player and library organizer
+digikam       # A digital camera accessing & photo management application
+kdenlive      # Non-linear video editor
+ffmpeg        # Digital VCR and streaming server
+gimp          # GNU Image Manipulation Program
+gthumb        # Image viewer, editor, organizer
+HandBrake     # An open-source multiplatform video transcoder
+HandBrake-gui # HandBrake GUI
+inkscape      # Vector-based drawing program using SVG
+kid3          # Efficient KDE ID3 tag editor
+moc            # music on console (needs a config-file, so run the following command) # echo "TiMidity_Config = /etc/timidity.cfg" >> .moc/config
+picard        # MusicBrainz-based audio tagger
+simplescreenrecorder # Simple Screen Recorder is a screen recorder for Linux
+vlc           # The cross-platform open-source multimedia framework, player and server
+youtube-dl    # A small command-line program to download online videos
+# gydl          # GUI wrapper around youtube-dl program
+# darktable     # Utility to organize and develop raw images
+# gstreamer1*   # Issue 3 # GStreamer streaming media framework runtime
+# openshot      # replaced by kdenlive
+# openshot-lang # replaced by kdenlive
+
+### Office
+bijiben     # Simple Note Viewer
+calibre     # E-book converter and library manager
+evince      # Document viewer
+evolution   # Mail and calendar client for GNOME
+libreoffice # Free Software Productivity Suite
+
+### Virtualization
+libvirt      # Library providing a simple virtualization API
+qemu         # QEMU is a FAST! processor emulator
+virt-manager # Desktop tool for managing virtual machines via libvirt
+
+### Backup
+backintime-qt # Qt frontend for backintime
+borgbackup    # very efficient tool for encrypted, deduplicated, optionally append-only remote backups.
+# testdisk # Tool to check and undelete partition, PhotoRec recovers lost files
+
+### Science
+# octave # A high-level language for numerical computations
+# R      # A language for data analysis and graphics
+# texlive-scheme-basic # basic scheme (plain and latex)
+# texlive-scheme-full  # full scheme (everything)
+# texworks             # A simple IDE for authoring TeX documents
+
+### Server
+# certbot        # A free, automated certificate authority client
+# python3-certbot-apache # The apache plugin for certbot
+# cockpit                # Web Console for Linux servers
+# cockpit-composer       # Composer GUI for use with Cockpit
+# cockpit-dashboard      # Cockpit remote server dashboard
+# cockpit-machines       # Cockpit user interface for virtual machines
+# cockpit-networkmanager # Cockpit user interface for networking, using NetworkManager
+# cockpit-packagekit     # Cockpit user interface for packages
+# cockpit-storaged       # Cockpit user interface for storage, using udisks
+# cockpit-system         # Cockpit admin interface package for configuring and troubleshooting a system
+# postgresql-server # PostgreSQL server
+
+### Development
+git-all     # Meta-package to pull in all git tools
+# autoconf    # A GNU tool for automatically configuring source code
+# autofs      # autofs daemon
+# automake    # A GNU tool for automatically creating Makefiles
+# cachefilesd # CacheFiles user-space management daemon
+# colordiff   # Color terminal highlighter for diff files
+# diffuse     # Graphical tool for merging and comparing text files
+
+### Monitoring
+bashtop   # Linux resource monitor
+etherape  # Graphical network monitor for Unix
+htop      # Interactive process viewer
+iftop     # Command line tool that displays bandwidth usage on an interface
+powertop  # Power consumption monitor
+# netdata # PCP Monitoring on localhost:19999, https://github.com/netdata/netdata
+nethogs   # Network-Monitoring
+nmap      # Network exploration tool and security scanner
+nutty     # Simple utility for network information
+stacer    # Linux System Optimizer and Monitor
+
+### CD/DVD/BD
+ddrescue        # Data recovery tool trying hard to rescue data in case of read errors
+dvdauthor       # Make a disc image or burn the disc: this is left to tools like mkisofs and dvd+rw-tools
+dvdisaster      # Additional error protection for CD/DVD media
+vcdimager       # VideoCD (pre-)mastering and ripping tool
+libaacs         # Blu-ray AACS Library
+libbdplus       # Blu-ray BD+ Library
+libbluray-utils # Blu-ray Library
 
 # All Other
-alacarte
-audacity
-autoconf
-# if unnecessary, please comment out.
-autofs
-automake
-backintime-qt
-baobab
-bijiben
-blivet-gui
-# very efficient tool for encrypted, deduplicated, optionally append-only remote backups.
-borgbackup
-# if unnecessary, please comment out.
-cachefilesd
-calibre
-# if unnecessary, please comment out.
-certbot
-certbot-apache
-# alternative web browser
-# chromium with VAAPI and Widevine DRM module
-chromium-freeworld
-clementine
-# if unnecessary, please comment out.
-cockpit
-cockpit-composer
-cockpit-dashboard
-cockpit-machines
-cockpit-networkmanager
-cockpit-packagekit
-cockpit-storaged
-cockpit-system
-colordiff
-# needs a lot of space. if unnecessary, please comment out.
-darktable
-# necessary for nm-connection-editor
-dbus-x11
-# missing package
-# diffuse
-digikam
-distribution-gpg-keys
-dnf-automatic
-dnf-plugin-system-upgrade
-# Network-Monitoring
-etherape
-evince
-evolution
-exfat-utils
-fdupes
-fedora-release-workstation
-filezilla
-firefox
-ffmpeg
-flatpak
-freerdp
-# missing package
-# fslint
-# beautiful mail client, unfortunately without PGP support so far
-geary
-gedit
-gimp
-git-all
-gnome-calendar
-gnome-clocks
-gnome-contacts
-gnome-firmware
-gnome-maps
-gnome-online-accounts
-gnome-terminal
-gnome-todo
-gnome-tweaks
-gnome-usage
-gnome-weather
-gparted
-# Issue 3
-# gstreamer1*
-gthumb
-HandBrake
-HandBrake-gui
-htop
-icedtea-web
-iftop
-inkscape
-java-openjdk
-# Video Editing
-kdenlive
-keepassxc
-keybase
-# Efficient KDE ID3 tag editor (see picard)
-kid3
-langpacks-de
-langpacks-en
-# Blu-ray AACS Library
-libaacs
-# Blu-ray BD+ Library
-libbdplus
-# Blu-ray Library
-libbluray-utils
-libgnome-keyring
-# .heif, .heic support
-libheif
-# iOS support
-libimobiledevice-utils
-libreoffice
-libtool
-# VAAPI driver and tools
-libva-intel*
-libva-utils
-libva-vdpau-driver
-libvirt
-mesa*
-# music on console (needs a config-file, so run the following command)
-# echo "TiMidity_Config = /etc/timidity.cfg" >> .moc/config
-moc
-# if unnecessary, please comment out.
-modem-manager-gui
-neofetch
-NetworkManager-*
-# PCP Monitoring on localhost:19999, https://github.com/netdata/netdata
-netdata
-# Network-Monitoring
-nethogs
-nextcloud-client
-# Network exploration tool and security scanner
-nmap
-# Simple utility for network information
-nutty
-ocl-icd
-# if unnecessary, please comment out.
-octave
-opencl-*
-# replaced by kdenlive
-# openshot
-# openshot-lang
-p7zip
-p7zip-gui
-p7zip-plugins
-pam-u2f
-pamu2fcfg
-# smart card support, like https://en.wikipedia.org/wiki/OpenPGP_card
-pcsc-lite
-# cross-platform music tagger written in Python, see kid3
-picard
-# if unnecessary, please comment out.
-# postgresql-server
-chromaprint-tools
-powertop
-qemu
-remmina
-# if unnecessary, please comment out.
-R
-# tool for re-ptying programs
-reptyr
-riot
-screenfetch
-seahorse
-simplescreenrecorder
-# btrfs snapshots (https://dustymabe.com/2019/01/06/fedora-btrfs-snapper---the-fedora-29-edition/)
-snapper
-# Shamir's secret sharing scheme
-ssss
-# Linux System Optimizer and Monitor
-stacer
-# P2P Synchronisation (https://syncthing.net/downloads/)
-syncthing
-python3-dnf-plugins-extras-snapper
-# data revocery tools
-# testdisk
-# needs a lot of space. if unnecessary, please comment out.
-texlive-scheme-full
-texworks
-# replaced xrdp
-tigervnc-server
-thunderbird
-thunderbird-enigmail
-transmission
-# DNS
-unbound
-vim-enhanced
-virt-manager
-# Spice-Viewer and Remote-Viewer for Virt-Manager VMs
-spice-gtk
-vlc
-vulkan*
-youtube-dl
+icedtea-web  # Additional Java components for OpenJDK - Java Web Start implementation
+java-openjdk # Java
+libtool      # The GNU Portable Library Tool
+libva-intel* # VAAPI driver and tools
+libva-utils  # VAAPI driver and tools
+libva-vdpau-driver # VAAPI driver and tools
+mesa*        # Mesa
+NetworkManager-* # Network connection manager and user applications
+ocl-icd      # OpenCL Library (Installable Client Library) Bindings
+opencl-*     # Useful OpenCL tools and utilities
+snapper      # btrfs snapshots (https://dustymabe.com/2019/01/06/fedora-btrfs-snapper---the-fedora-29-edition/)
+python3-dnf-plugins-extras-snapper # 
+ssss         # Shamir's secret sharing scheme
+syncthing    # P2P Synchronisation (https://syncthing.net/downloads/)
+vulkan*      # Vulkan
+# modem-manager-gui # ModemManager GUI
+
 %end
 
 %addon com_redhat_kdump --disable --reserve-mb='128'
@@ -271,110 +255,16 @@ pwpolicy luks --minlen=10 --minquality=50 --strict --notempty --nochanges
 # Repositories
 dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm https://prerelease.keybase.io/keybase_amd64.rpm
 # Element
-dnf copr enable taw/element
+dnf -y copr enable taw/element
 # negativo17 nvidia repository
 dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
 # Packages
-dnf -y install nvidia-driver nvidia-settings riot rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted --refresh
+dnf -y install rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted --refresh
+# NVIDIA
+# dnf -y install nvidia-driver nvidia-settings
 # Signal Desktop as Flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub org.signal.Signal
-# unbound
-# Please add a name and the ID from nextdns.io
-NAME="name";
-ID="myid1234";
-echo -n "server:
-	verbosity: 1
-	statistics-interval: 0
-	statistics-cumulative: no
-	extended-statistics: yes
-	num-threads: 4
-	interface: 127.0.0.1
-	interface: ::1
-	interface-automatic: no
-	port: 53
-	outgoing-port-permit: 32768-60999
-	outgoing-port-avoid: 0-32767
-	so-reuseport: yes
-	ip-transparent: yes
-	max-udp-size: 3072
-	edns-tcp-keepalive: yes
-	access-control: 127.0.0.0/8 allow
-	access-control: ::1 allow
-	access-control: 192.168.188.0/8 allow
-	chroot: \"\"
-	username: \"unbound\"
-	directory: \"/etc/unbound\"
-	log-time-ascii: yes
-	pidfile: \"/var/run/unbound/unbound.pid\"
-	harden-glue: yes
-	harden-dnssec-stripped: yes
-	harden-below-nxdomain: yes
-	harden-referral-path: yes
-	qname-minimisation: yes
-	aggressive-nsec: yes
-	unwanted-reply-threshold: 10000000
-	prefetch: yes
-	prefetch-key: yes
-	deny-any: yes
-	rrset-roundrobin: yes
-	minimal-responses: yes
-	module-config: \"ipsecmod validator iterator\"
-	trust-anchor-signaling: yes
-	root-key-sentinel: yes
-	trusted-keys-file: /etc/unbound/keys.d/*.key
-	auto-trust-anchor-file: \"/var/lib/unbound/root.key\"
-	domain-insecure: zone 
-	val-clean-additional: yes
-	val-permissive-mode: no
-	serve-expired: yes
-	serve-expired-ttl: 14400
-	val-log-level: 1
-	include: /etc/unbound/local.d/*.conf
-	tls-cert-bundle: \"/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem\"
-	ipsecmod-enabled: no
-	ipsecmod-hook:/usr/libexec/ipsec/_unbound-hook
-python:
-remote-control:
-	control-enable: yes
-	control-use-cert: \"no\"
-	server-key-file: \"/etc/unbound/unbound_server.key\"
-	server-cert-file: \"/etc/unbound/unbound_server.pem\"
-	control-key-file: \"/etc/unbound/unbound_control.key\"
-	control-cert-file: \"/etc/unbound/unbound_control.pem\"
 
-include: /etc/unbound/conf.d/*.conf
-
-forward-zone:
-  name: \".\"
-  forward-tls-upstream: yes
-  forward-addr: 45.90.28.0#$NAME-$ID.dns1.nextdns.io
-  forward-addr: 2a07:a8c0::#$NAME-$ID.dns1.nextdns.io
-  forward-addr: 45.90.30.0#$NAME-$ID.dns2.nextdns.io
-  forward-addr: 2a07:a8c1::#$NAME-$ID.dns2.nextdns.io
-
-auth-zone:
-	name: \".\"
-	for-downstream: no
-	for-upstream: yes
-	fallback-enabled: yes
-	master: 199.9.14.201         # b.root-servers.net
-	master: 192.33.4.12          # c.root-servers.net
-	master: 199.7.91.13          # d.root-servers.net
-	master: 192.5.5.241          # f.root-servers.net
-	master: 192.112.36.4         # g.root-servers.net
-	master: 193.0.14.129         # k.root-servers.net
-	master: 192.0.47.132         # xfr.cjr.dns.icann.org
-	master: 192.0.32.132         # xfr.lax.dns.icann.org
-	master: 2001:500:200::b      # b.root-servers.net
-	master: 2001:500:2::c        # c.root-servers.net
-	master: 2001:500:2d::d       # d.root-servers.net
-	master: 2001:500:2f::f       # f.root-servers.net
-	master: 2001:500:12::d0d     # g.root-servers.net
-	master: 2001:7fd::1          # k.root-servers.net
-	master: 2620:0:2830:202::132 # xfr.cjr.dns.icann.org
-	master: 2620:0:2d0:202::132  # xfr.lax.dns.icann.org
-" > /etc/unbound/unbound.conf
-systemctl enable --now unbound
 # dnf-automatic security upgrades
 # timer configuration: /etc/systemd/system/multi-user.target.wants/dnf-automatic.timer
 echo -n '[commands]
