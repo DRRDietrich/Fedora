@@ -8,11 +8,16 @@ https://download.fedoraproject.org/pub/fedora/linux/releases/34/Everything/x86_6
 
 ### Grub Options
 
-Press Strg + e to edit the grub options and append the following option:
+Press `e` or `Strg + e` to edit the grub options and append the following option:
 
 inst.ks=https://raw.githubusercontent.com/DRRDietrich/Fedora/master/fedora.ks
 
-Press Strg + x to start the installer with kickstart configuration.
+Press `Strg + x` to start the installer with kickstart configuration.
+
+### System Requirements
+- 1,5 GB RAM
+- 18 GB free disk space
+- 4,3 GB to download (3,4 GB for 3068 PRMs + 900 MB for post-installation scripts) (As of today: 2021-02-12)
 
 ## Legacy Geek Code
 
