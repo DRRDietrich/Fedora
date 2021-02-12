@@ -1,21 +1,21 @@
-#version=F33
+#version=F34
 
 # URLs and REPOs
-url --mirrorlist="https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-33&arch=x86_64"
-repo --name=fedora-updates --mirrorlist="https://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f33&arch=x86_64" --cost=0
+url --mirrorlist="https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-34&arch=x86_64"
+repo --name=fedora-updates --mirrorlist="https://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f34&arch=x86_64" --cost=0
 # RPMFusion Free
-repo --name=rpmfusion-free --mirrorlist="https://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-33&arch=x86_64" --includepkgs=rpmfusion-free-release
-repo --name=rpmfusion-free-updates --mirrorlist="https://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-updates-released-33&arch=x86_64" --cost=0
-repo --name=rpmfusion-free-tainted --mirrorlist="https://mirrors.rpmfusion.org/metalink?repo=free-fedora-tainted-33&arch=x86_64"
+repo --name=rpmfusion-free --mirrorlist="https://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-34&arch=x86_64" --includepkgs=rpmfusion-free-release
+repo --name=rpmfusion-free-updates --mirrorlist="https://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-updates-released-34&arch=x86_64" --cost=0
+repo --name=rpmfusion-free-tainted --mirrorlist="https://mirrors.rpmfusion.org/metalink?repo=free-fedora-tainted-34&arch=x86_64"
 # RPMFusion NonFree
-repo --name=rpmfusion-nonfree --mirrorlist="https://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-33&arch=x86_64" --includepkgs=rpmfusion-nonfree-release
-repo --name=rpmfusion-nonfree-updates --mirrorlist="https://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-released-33&arch=x86_64" --cost=0
-repo --name=rpmfusion-nonfree-tainted --mirrorlist="https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-33&arch=x86_64"
+repo --name=rpmfusion-nonfree --mirrorlist="https://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-34&arch=x86_64" --includepkgs=rpmfusion-nonfree-release
+repo --name=rpmfusion-nonfree-updates --mirrorlist="https://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-released-34&arch=x86_64" --cost=0
+repo --name=rpmfusion-nonfree-tainted --mirrorlist="https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-34&arch=x86_64"
 # Negativo17 NVIDIA/CUDA
-repo --name=negativo17 --baseurl="https://negativo17.org/repos/nvidia/fedora-33/x86_64/"
+repo --name=negativo17 --baseurl="https://negativo17.org/repos/nvidia/fedora-34/x86_64/"
 # Secure Messenger
 repo --name=keybase --baseurl="http://prerelease.keybase.io/rpm/x86_64"
-repo --name=element --baseurl="https://download.copr.fedorainfracloud.org/results/taw/element/fedora-33-x86_64/"
+repo --name=element --baseurl="https://download.copr.fedorainfracloud.org/results/taw/element/fedora-34-x86_64/"
 
 # Use graphical install
 graphical
@@ -26,7 +26,7 @@ lang de_DE.UTF-8
 
 # Network information
 network  --bootproto=dhcp --device=enp3s0 --ipv6=auto --activate
-network  --hostname=fedora33
+network  --hostname=fedora34
 # X Window System configuration information
 # xconfig --defaultdesktop GNOME --startxonboot
 # System services
@@ -63,27 +63,35 @@ selinux --disabled
 
 ### Gnome
 alacarte          # Menu editor for the GNOME desktop
+evolution         # Mail and calendar client for GNOME
 gedit             # Text editor for the GNOME desktop
-gnome-books       # E-Book Manager
 gnome-calendar    # Simple and beautiful calendar application designed to fit GNOME 3
 gnome-clocks      # Clock application designed for GNOME 3
 gnome-contacts    # Contacts manager for GNOME
-gnome-firmware    # Install firmware on devices
-gnome-maps        # Map application for GNOME
 gnome-online-accounts # Single sign-on framework for GNOME
 gnome-terminal    # Terminal emulator for GNOME
-gnome-todo        # Personal task manager for GNOME
 gnome-tweaks      # Customize advanced GNOME 3 options
 gnome-usage       # A GNOME app to view information about use of system resources
 gnome-weather     # A weather application for GNOME
-gparted           # Gnome Partition Editor
 seahorse          # A GNOME application for managing encryption keys
 seahorse-nautilus # PGP encryption and signing for nautilus
 seahorse-sharing  # Sharing of PGP public keys via DNS-SD and HKP
 # geary           # beautiful mail client, unfortunately without PGP support so far
+# gnome-books     # E-Book Manager
+# gnome-firmware  # Install firmware on devices
+# gnome-maps      # Map application for GNOME
+# gnome-todo      # Personal task manager for GNOME
+# gparted         # Gnome Partition Editor
+
+### Gnome Shell Extensions
+gnome-extensions-app # Manage GNOME Shell extensions
+gnome-shell-extension-background-logo # Background logo extension for GNOME Shell
+gnome-shell-extension-system-monitor-applet # A Gnome shell system monitor extension
+gnome-shell-extension-apps-menu # Application menu for GNOME Shell
+gnome-shell-extension-dash-to-dock # Dash to Dock
+gnome-shell-extension-places-menu # Places status menu for GNOME Shell
 
 ### Essential Tools
-baobab        # A graphical directory tree analyzer
 blivet-gui    # Tool for data storage configuration
 dbus-x11      # necessary for nm-connection-editor
 distribution-gpg-keys # GPG keys of various Linux distributions
@@ -97,21 +105,22 @@ keepassxc     # Cross-platform password manager
 langpacks-de  # German langpacks meta-package
 langpacks-en  # English langpacks meta-package
 libgnome-keyring # Framework for managing passwords and other secrets
-libheif                # .heif, .heic support
+libheif       # .heif, .heic support
 libimobiledevice-utils # iOS support
 neofetch      # CLI system information tool written in Bash
 # screenfetch # like neofetch, but not as nice as neofetch, but with disk usage
-nextcloud-client # The Nextcloud Client
 p7zip         # Very high compression ratio file archiver
-p7zip-gui     # 7zG - 7-Zip GUI version
 p7zip-plugins # Additional plugins for p7zip
 pam-u2f       # Implements PAM authentication over U2F
 pamu2fcfg     # Configures PAM authentication over U2F
 pcsc-lite     # PC/SC Lite smart card framework and applications, like https://en.wikipedia.org/wiki/OpenPGP_card
 reptyr        # Attach a running process to a new terminal
 vim-enhanced  # A version of the VIM editor which includes recent enhancements
+# baobab        # A graphical directory tree analyzer
 # distribution-gpg-keys-copr # GPG keys for Copr projects
 # fslint      # deprecated package # replaced by czkawka_gui # https://github.com/qarmin/czkawka
+# nextcloud-client # The Nextcloud Client
+# p7zip-gui     # 7zG - 7-Zip GUI version
 
 ### Internet
 # chromium           # A WebKit (Blink) powered web browser
@@ -123,8 +132,8 @@ freerdp              # Free implementation of the Remote Desktop Protocol (RDP)
 keybase              # The Keybase Go client, filesystem, and GUI
 remmina              # Remote Desktop Client
 thunderbird          # Mozilla Thunderbird mail/newsgroup client
-thunderbird-enigmail # Authentication and encryption extension for Mozilla Thunderbird
 transmission         # A lightweight GTK+ BitTorrent client
+# thunderbird-enigmail # Authentication and encryption extension for Mozilla Thunderbird
 # tigervnc-server    # A TigerVNC server
 # xrdp               # Open source remote desktop protocol (RDP) server
 
@@ -154,11 +163,10 @@ youtube-dl    # A small command-line program to download online videos
 # openshot-lang # replaced by kdenlive
 
 ### Office
-bijiben     # Simple Note Viewer
-calibre     # E-book converter and library manager
 evince      # Document viewer
-evolution   # Mail and calendar client for GNOME
 libreoffice # Free Software Productivity Suite
+# bijiben   # Simple Note Viewer
+# calibre   # E-book converter and library manager
 
 ### Virtualization
 libvirt      # Library providing a simple virtualization API
@@ -171,11 +179,11 @@ borgbackup    # very efficient tool for encrypted, deduplicated, optionally appe
 # testdisk # Tool to check and undelete partition, PhotoRec recovers lost files
 
 ### Science
+texlive-scheme-basic # basic scheme (plain and latex)
+texworks             # A simple IDE for authoring TeX documents
 # octave # A high-level language for numerical computations
 # R      # A language for data analysis and graphics
-# texlive-scheme-basic # basic scheme (plain and latex)
-# texlive-scheme-full  # full scheme (everything)
-# texworks             # A simple IDE for authoring TeX documents
+# texlive-scheme-full # full scheme (everything)
 
 ### Server
 # certbot        # A free, automated certificate authority client
@@ -200,25 +208,28 @@ git-all     # Meta-package to pull in all git tools
 # diffuse     # Graphical tool for merging and comparing text files
 
 ### Monitoring
-bashtop   # Linux resource monitor
-etherape  # Graphical network monitor for Unix
-htop      # Interactive process viewer
-iftop     # Command line tool that displays bandwidth usage on an interface
-powertop  # Power consumption monitor
-# netdata # PCP Monitoring on localhost:19999, https://github.com/netdata/netdata
-nethogs   # Network-Monitoring
-nmap      # Network exploration tool and security scanner
-nutty     # Simple utility for network information
-stacer    # Linux System Optimizer and Monitor
+bashtop    # Linux resource monitor
+htop       # Interactive process viewer
+iftop      # Command line tool that displays bandwidth usage on an interface
+powertop   # Power consumption monitor
+nmap       # Network exploration tool and security scanner
+nutty      # Simple utility for network information
+# etherape # Graphical network monitor for Unix
+# netdata  # PCP Monitoring on localhost:19999, https://github.com/netdata/netdata
+# nethogs  # Network-Monitoring
+# stacer   # Linux System Optimizer and Monitor
 
 ### CD/DVD/BD
-ddrescue        # Data recovery tool trying hard to rescue data in case of read errors
-dvdauthor       # Make a disc image or burn the disc: this is left to tools like mkisofs and dvd+rw-tools
-dvdisaster      # Additional error protection for CD/DVD media
-vcdimager       # VideoCD (pre-)mastering and ripping tool
+# brasero       # Gnome CD/DVD burning application
+# ddrescue      # Data recovery tool trying hard to rescue data in case of read errors
+# dvdautho      # Make a disc image or burn the disc: this is left to tools like mkisofs and dvd+rw-tools
+# dvdisaster    # Additional error protection for CD/DVD media
+# k3b           # CD/DVD/Blu-ray burning application
 libaacs         # Blu-ray AACS Library
 libbdplus       # Blu-ray BD+ Library
 libbluray-utils # Blu-ray Library
+# vcdimager     # VideoCD (pre-)mastering and ripping tool
+
 
 # All Other
 icedtea-web  # Additional Java components for OpenJDK - Java Web Start implementation
