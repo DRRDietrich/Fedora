@@ -17,7 +17,7 @@ Press `Strg + x` to start the installer with kickstart configuration.
 ### System Requirements
 - 1,5 GB RAM
 - 18 GB free disk space
-- 4,2 GB to download (3,3 GB for 2855 PRMs + 850 MB for post-installation scripts) (As of today: 2021-02-12)
+- 4,3 GB to download (3,4 GB for 3068 PRMs + 900 MB for post-installation scripts) (As of today: 2021-02-12)
 
 ## Legacy Geek Code
 
