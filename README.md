@@ -4,7 +4,7 @@ Kickstart installation of Fedora 33 with useful packages and RPMFusion, negativo
 
 ### Download Fedora 33 netinst ISO
 
-[https://download.fedoraproject.org/pub/fedora/linux/releases/33/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-33-1.2.iso]
+https://download.fedoraproject.org/pub/fedora/linux/releases/33/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-33-1.2.iso
 
 ### Grub Options
 
