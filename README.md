@@ -4,13 +4,13 @@ Kickstart installation of Fedora 34 with useful packages and RPMFusion, dracut-c
 
 ### Download Fedora 34 netinst ISO 
 
-[https://ftp-stud.hs-esslingen.de/pub/fedora/linux/releases/test/34_Beta/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-34_Beta-1.3.iso]
+https://ftp-stud.hs-esslingen.de/pub/fedora/linux/releases/test/34_Beta/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-34_Beta-1.3.iso
 
 ### Grub Options
 
 Press `e` or `Strg + e` to edit the grub options and append the following option:
 
-inst.ks=https://raw.githubusercontent.com/DRRDietrich/Fedora/master/fedora.ks
+inst.ks=https://raw.githubusercontent.com/DRRDietrich/Fedora/F34/fedora.ks
 
 Press `Strg + x` to start the installer with kickstart configuration.
 
