@@ -91,10 +91,7 @@ gnome-shell-extension-dash-to-dock          # Dash to Dock
 gnome-shell-extension-places-menu           # Places status menu for GNOME Shell
 
 ### Essential Tools
-<<<<<<< HEAD
-=======
 asciinema                # recording and sharing terminal sessions
->>>>>>> 114656bdceea8817a2c9c18d568c72774c2a80cb
 blivet-gui               # Tool for data storage configuration
 dbus-x11                 # necessary for nm-connection-editor
 distribution-gpg-keys    # GPG keys of various Linux distributions
@@ -118,10 +115,7 @@ pam-u2f                  # Implements PAM authentication over U2F
 pamu2fcfg                # Configures PAM authentication over U2F
 pcsc-lite                # PC/SC Lite smart card framework and applications, like https://en.wikipedia.org/wiki/OpenPGP_card
 reptyr                   # Attach a running process to a new terminal
-<<<<<<< HEAD
-=======
 terminator               # Multiple GNOME terminals in one window.
->>>>>>> 114656bdceea8817a2c9c18d568c72774c2a80cb
 vim-enhanced             # A version of the VIM editor which includes recent enhancements
 # baobab                 # A graphical directory tree analyzer
 # distribution-gpg-keys-copr # GPG keys for Copr projects
@@ -136,11 +130,7 @@ element                  # A decentralized, secure messaging client for collabor
 filezilla                # FTP, FTPS and SFTP client
 firefox                  # Mozilla Firefox Web browser
 freerdp                  # Free implementation of the Remote Desktop Protocol (RDP)
-<<<<<<< HEAD
-keybase                  # The Keybase Go client, filesystem, and GUI
-=======
 # keybase                # The Keybase Go client, filesystem, and GUI
->>>>>>> 114656bdceea8817a2c9c18d568c72774c2a80cb
 remmina                  # Remote Desktop Client
 thunderbird              # Mozilla Thunderbird mail/newsgroup client
 transmission             # A lightweight GTK+ BitTorrent client
@@ -151,10 +141,6 @@ transmission             # A lightweight GTK+ BitTorrent client
 ### Multimedia
 audacity                 # Multitrack audio editor
 # audacity-freeworld     # Multitrack audio editor WITH mp3 support
-<<<<<<< HEAD
-chromaprint-tools        # Chromaprint audio fingerprinting tools
-=======
->>>>>>> 114656bdceea8817a2c9c18d568c72774c2a80cb
 clementine               # A music player and library organizer
 digikam                  # A digital camera accessing & photo management application
 kdenlive                 # Non-linear video editor
@@ -164,10 +150,6 @@ gthumb                   # Image viewer, editor, organizer
 HandBrake                # An open-source multiplatform video transcoder
 HandBrake-gui            # HandBrake GUI
 inkscape                 # Vector-based drawing program using SVG
-<<<<<<< HEAD
-kid3                     # Efficient KDE ID3 tag editor
-moc                      # music on console (needs a config-file, so run the following command) # echo "TiMidity_Config = /etc/timidity.cfg" >> .moc/config
-picard                   # MusicBrainz-based audio tagger
 simplescreenrecorder     # Simple Screen Recorder is a screen recorder for Linux
 vlc                      # The cross-platform open-source multimedia framework, player and server
 youtube-dl               # A small command-line program to download online videos
@@ -176,9 +158,8 @@ youtube-dl               # A small command-line program to download online video
 # gstreamer1*            # Issue 3 # GStreamer streaming media framework runtime
 # openshot               # replaced by kdenlive
 # openshot-lang          # replaced by kdenlive
-=======
 simplescreenrecorder     # Simple Screen Recorder is a screen recorder for Linux
-# vlc                    # The cross-platform open-source multimedia framework, player and server TODO: Not in F34
+vlc                      # The cross-platform open-source multimedia framework, player and server
 youtube-dl               # A small command-line program to download online videos
 # chromaprint-tools      # Chromaprint audio fingerprinting tools
 # gydl                   # GUI wrapper around youtube-dl program
@@ -191,7 +172,6 @@ youtube-dl               # A small command-line program to download online video
 # openshot               # replaced by kdenlive
 # openshot-lang          # replaced by kdenlive
 # picard                 # MusicBrainz-based audio tagger
->>>>>>> 114656bdceea8817a2c9c18d568c72774c2a80cb
 
 ### Office
 evince                   # Document viewer
@@ -201,34 +181,24 @@ libreoffice              # Free Software Productivity Suite
 
 ### Virtualization
 libvirt                  # Library providing a simple virtualization API
-<<<<<<< HEAD
-=======
 spice-gtk                # High performance VM with OpenGL
->>>>>>> 114656bdceea8817a2c9c18d568c72774c2a80cb
 qemu                     # QEMU is a FAST! processor emulator
 virt-manager             # Desktop tool for managing virtual machines via libvirt
 
 ### Backup
 backintime-qt            # Qt frontend for backintime
 borgbackup               # very efficient tool for encrypted, deduplicated, optionally append-only remote backups.
-<<<<<<< HEAD
-=======
 borgmatic                # Simple Python wrapper script for borgbackup
->>>>>>> 114656bdceea8817a2c9c18d568c72774c2a80cb
 # testdisk               # Tool to check and undelete partition, PhotoRec recovers lost files
 
 ### Science
 texlive-scheme-small     # small scheme (most used packages)
 # texlive-scheme-full    # full scheme (everything)
-<<<<<<< HEAD
-texworks                 # A simple IDE for authoring TeX documents
-=======
 # texworks               # A simple IDE for authoring TeX documents
 texstudio                # A complex IDE for authoring TeX documents
 tikzit                   # Diagram editor for pgf/TikZ
 texlive-plantuml         # PlantUML diagrams in (Lua)LaTeX
 plantumlqeditor          # UML diagram Editor, latest plantuml version https://plantuml.com/de/download
->>>>>>> 114656bdceea8817a2c9c18d568c72774c2a80cb
 # octave                 # A high-level language for numerical computations
 # R                      # A language for data analysis and graphics
 
@@ -255,11 +225,7 @@ git-all                  # Meta-package to pull in all git tools
 # diffuse                # Graphical tool for merging and comparing text files
 
 ### Monitoring
-<<<<<<< HEAD
 bashtop                  # Linux resource monitor
-=======
-# bashtop                # Linux resource monitor TODO: Not in F34
->>>>>>> 114656bdceea8817a2c9c18d568c72774c2a80cb
 htop                     # Interactive process viewer
 iftop                    # Command line tool that displays bandwidth usage on an interface
 powertop                 # Power consumption monitor
