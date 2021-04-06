@@ -11,11 +11,8 @@ repo --name=rpmfusion-free-tainted --mirrorlist="https://mirrors.rpmfusion.org/m
 repo --name=rpmfusion-nonfree --mirrorlist="https://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-34&arch=x86_64" --includepkgs=rpmfusion-nonfree-release
 repo --name=rpmfusion-nonfree-updates --mirrorlist="https://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-released-34&arch=x86_64" --cost=0
 repo --name=rpmfusion-nonfree-tainted --mirrorlist="https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-34&arch=x86_64"
-# Negativo17 NVIDIA/CUDA
-repo --name=negativo17 --baseurl="https://negativo17.org/repos/nvidia/fedora-34/x86_64/"
 # Secure Messenger
-repo --name=keybase --baseurl="http://prerelease.keybase.io/rpm/x86_64"
-repo --name=element --baseurl="https://download.copr.fedorainfracloud.org/results/taw/element/fedora-34-x86_64/"
+repo --name=element --baseurl="https://download.copr.fedorainfracloud.org/results/taw/element/fedora-33-x86_64/"
 
 # Use graphical install
 graphical
@@ -92,6 +89,7 @@ gnome-shell-extension-dash-to-dock          # Dash to Dock
 gnome-shell-extension-places-menu           # Places status menu for GNOME Shell
 
 ### Essential Tools
+asciinema                # recording and sharing terminal sessions
 blivet-gui               # Tool for data storage configuration
 dbus-x11                 # necessary for nm-connection-editor
 distribution-gpg-keys    # GPG keys of various Linux distributions
@@ -115,6 +113,7 @@ pam-u2f                  # Implements PAM authentication over U2F
 pamu2fcfg                # Configures PAM authentication over U2F
 pcsc-lite                # PC/SC Lite smart card framework and applications, like https://en.wikipedia.org/wiki/OpenPGP_card
 reptyr                   # Attach a running process to a new terminal
+terminator               # Multiple GNOME terminals in one window.
 vim-enhanced             # A version of the VIM editor which includes recent enhancements
 # baobab                 # A graphical directory tree analyzer
 # distribution-gpg-keys-copr # GPG keys for Copr projects
@@ -129,7 +128,7 @@ element                  # A decentralized, secure messaging client for collabor
 filezilla                # FTP, FTPS and SFTP client
 firefox                  # Mozilla Firefox Web browser
 freerdp                  # Free implementation of the Remote Desktop Protocol (RDP)
-keybase                  # The Keybase Go client, filesystem, and GUI
+# keybase                # The Keybase Go client, filesystem, and GUI
 remmina                  # Remote Desktop Client
 thunderbird              # Mozilla Thunderbird mail/newsgroup client
 transmission             # A lightweight GTK+ BitTorrent client
@@ -140,7 +139,6 @@ transmission             # A lightweight GTK+ BitTorrent client
 ### Multimedia
 audacity                 # Multitrack audio editor
 # audacity-freeworld     # Multitrack audio editor WITH mp3 support
-chromaprint-tools        # Chromaprint audio fingerprinting tools
 clementine               # A music player and library organizer
 digikam                  # A digital camera accessing & photo management application
 kdenlive                 # Non-linear video editor
@@ -150,17 +148,20 @@ gthumb                   # Image viewer, editor, organizer
 HandBrake                # An open-source multiplatform video transcoder
 HandBrake-gui            # HandBrake GUI
 inkscape                 # Vector-based drawing program using SVG
-kid3                     # Efficient KDE ID3 tag editor
-moc                      # music on console (needs a config-file, so run the following command) # echo "TiMidity_Config = /etc/timidity.cfg" >> .moc/config
-picard                   # MusicBrainz-based audio tagger
 simplescreenrecorder     # Simple Screen Recorder is a screen recorder for Linux
-vlc                      # The cross-platform open-source multimedia framework, player and server
+# vlc                    # The cross-platform open-source multimedia framework, player and server TODO: Not in F34
 youtube-dl               # A small command-line program to download online videos
+# chromaprint-tools      # Chromaprint audio fingerprinting tools
 # gydl                   # GUI wrapper around youtube-dl program
 # darktable              # Utility to organize and develop raw images
 # gstreamer1*            # Issue 3 # GStreamer streaming media framework runtime
+# kid3                   # Efficient KDE ID3 tag editor
+# krita                  # Sketching and painting program
+# moc                    # music on console (needs a config-file, so run the following command) # echo "TiMidity_Config = /etc/timidity.cfg" >> .moc/config
+# obs-studio             # 
 # openshot               # replaced by kdenlive
 # openshot-lang          # replaced by kdenlive
+# picard                 # MusicBrainz-based audio tagger
 
 ### Office
 evince                   # Document viewer
@@ -170,18 +171,24 @@ libreoffice              # Free Software Productivity Suite
 
 ### Virtualization
 libvirt                  # Library providing a simple virtualization API
+spice-gtk                # High performance VM with OpenGL
 qemu                     # QEMU is a FAST! processor emulator
 virt-manager             # Desktop tool for managing virtual machines via libvirt
 
 ### Backup
 backintime-qt            # Qt frontend for backintime
 borgbackup               # very efficient tool for encrypted, deduplicated, optionally append-only remote backups.
+borgmatic                # Simple Python wrapper script for borgbackup
 # testdisk               # Tool to check and undelete partition, PhotoRec recovers lost files
 
 ### Science
 texlive-scheme-small     # small scheme (most used packages)
 # texlive-scheme-full    # full scheme (everything)
-texworks                 # A simple IDE for authoring TeX documents
+# texworks               # A simple IDE for authoring TeX documents
+texstudio                # A complex IDE for authoring TeX documents
+tikzit                   # Diagram editor for pgf/TikZ
+texlive-plantuml         # PlantUML diagrams in (Lua)LaTeX
+plantumlqeditor          # UML diagram Editor, latest plantuml version https://plantuml.com/de/download
 # octave                 # A high-level language for numerical computations
 # R                      # A language for data analysis and graphics
 
@@ -208,7 +215,7 @@ git-all                  # Meta-package to pull in all git tools
 # diffuse                # Graphical tool for merging and comparing text files
 
 ### Monitoring
-bashtop                  # Linux resource monitor
+# bashtop                # Linux resource monitor TODO: Not in F34
 htop                     # Interactive process viewer
 iftop                    # Command line tool that displays bandwidth usage on an interface
 powertop                 # Power consumption monitor
@@ -267,12 +274,8 @@ pwpolicy luks --minlen=10 --minquality=50 --strict --notempty --nochanges
 dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm https://prerelease.keybase.io/keybase_amd64.rpm
 # Element
 dnf -y copr enable taw/element
-# negativo17 nvidia repository
-dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
 # Packages
 dnf -y install rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted --refresh
-# NVIDIA
-# dnf -y install nvidia-driver nvidia-settings
 # Signal Desktop as Flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub org.signal.Signal
 
