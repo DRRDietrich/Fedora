@@ -1,8 +1,8 @@
 # Fedora 34
 
-Kickstart installation of Fedora 34 with useful packages and RPMFusion, dracut-crypt-ssh, keybase and element repositories.
+Kickstart installation of Fedora 34 with useful packages and RPMFusion, negativo17 nvidia, dracut-crypt-ssh, keybase and element repositories.
 
-### Download Fedora 34 netinst ISO 
+### Download Fedora 34 netinst ISO
 
 [https://ftp-stud.hs-esslingen.de/pub/fedora/linux/releases/test/34_Beta/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-34_Beta-1.3.iso]
 

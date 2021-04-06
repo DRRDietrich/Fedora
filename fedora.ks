@@ -11,6 +11,8 @@ repo --name=rpmfusion-free-tainted --mirrorlist="https://mirrors.rpmfusion.org/m
 repo --name=rpmfusion-nonfree --mirrorlist="https://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-34&arch=x86_64" --includepkgs=rpmfusion-nonfree-release
 repo --name=rpmfusion-nonfree-updates --mirrorlist="https://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-released-34&arch=x86_64" --cost=0
 repo --name=rpmfusion-nonfree-tainted --mirrorlist="https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-34&arch=x86_64"
+# Negativo17 NVIDIA/CUDA
+repo --name=negativo17 --baseurl="https://negativo17.org/repos/nvidia/fedora-34/x86_64/"
 # Secure Messenger
 repo --name=element --baseurl="https://download.copr.fedorainfracloud.org/results/taw/element/fedora-33-x86_64/"
 
@@ -274,8 +276,12 @@ pwpolicy luks --minlen=10 --minquality=50 --strict --notempty --nochanges
 dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm https://prerelease.keybase.io/keybase_amd64.rpm
 # Element
 dnf -y copr enable taw/element
+# negativo17 nvidia repository
+dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
 # Packages
 dnf -y install rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted --refresh
+# NVIDIA
+dnf -y install nvidia-driver nvidia-settings
 # Signal Desktop as Flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub org.signal.Signal
 
