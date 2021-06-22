@@ -49,10 +49,14 @@ timezone Europe/Berlin --isUtc --ntpservers=0.pool.ntp.org,1.pool.ntp.org,2.pool
 selinux --disabled
 
 %packages
-@^workstation-product-environment
+@workstation-product-environment
 @admin-tools
+@container-management
 @development-tools
 @editors
+@gnome-desktop
+@fonts
+@hardware-support
 @libreoffice
 @office
 @sound-and-video
@@ -73,8 +77,10 @@ gnome-weather            # A weather application for GNOME
 seahorse                 # A GNOME application for managing encryption keys
 seahorse-nautilus        # PGP encryption and signing for nautilus
 seahorse-sharing         # Sharing of PGP public keys via DNS-SD and HKP
+soundconverter           # SoundConverter
 # geary                  # beautiful mail client, unfortunately without PGP support so far
 # gnome-books            # E-Book Manager
+# gnome-kiosk            # Single Application Mode for Gnome
 # gnome-firmware         # Install firmware on devices
 # gnome-maps             # Map application for GNOME
 # gnome-todo             # Personal task manager for GNOME
@@ -117,7 +123,6 @@ terminator               # Multiple GNOME terminals in one window.
 vim-enhanced             # A version of the VIM editor which includes recent enhancements
 # baobab                 # A graphical directory tree analyzer
 # distribution-gpg-keys-copr # GPG keys for Copr projects
-# fslint                 # deprecated package # replaced by czkawka_gui # https://github.com/qarmin/czkawka
 # nextcloud-client       # The Nextcloud Client
 # p7zip-gui              # 7zG - 7-Zip GUI version
 
@@ -128,39 +133,38 @@ element                  # A decentralized, secure messaging client for collabor
 filezilla                # FTP, FTPS and SFTP client
 firefox                  # Mozilla Firefox Web browser
 freerdp                  # Free implementation of the Remote Desktop Protocol (RDP)
-# keybase                # The Keybase Go client, filesystem, and GUI
-remmina                  # Remote Desktop Client
+remmina                  # Remote Desktop Client (For performance reasons, use `xfreerdp /rfx /gfx:RFX /u:USER /v:SERVER /multimon` instead)
 thunderbird              # Mozilla Thunderbird mail/newsgroup client
-transmission             # A lightweight GTK+ BitTorrent client
-# thunderbird-enigmail   # Authentication and encryption extension for Mozilla Thunderbird
-# tigervnc-server        # A TigerVNC server
-# xrdp                   # Open source remote desktop protocol (RDP) server
+xrdp                     # Open source remote desktop protocol (RDP) server
+xorgxrdp                 # xorgxrdp is a set of X11 modules that make Xorg act as a backend for xrdp.
+# keybase                # The Keybase Go client, filesystem, and GUI
+# transmission           # A lightweight GTK+ BitTorrent client. Does anyone still use torrents?
 
 ### Multimedia
-audacity                 # Multitrack audio editor
-# audacity-freeworld     # Multitrack audio editor WITH mp3 support
+# audacity               # Multitrack audio editor
+audacity-freeworld       # Multitrack audio editor WITH mp3 support
 clementine               # A music player and library organizer
 digikam                  # A digital camera accessing & photo management application
 kdenlive                 # Non-linear video editor
 ffmpeg                   # Digital VCR and streaming server
 gimp                     # GNU Image Manipulation Program
+gstreamer1*              # Issue 3 # GStreamer streaming media framework runtime
 gthumb                   # Image viewer, editor, organizer
 HandBrake                # An open-source multiplatform video transcoder
 HandBrake-gui            # HandBrake GUI
 inkscape                 # Vector-based drawing program using SVG
 simplescreenrecorder     # Simple Screen Recorder is a screen recorder for Linux
-# vlc                    # The cross-platform open-source multimedia framework, player and server TODO: Not in F34
+vlc                      # The cross-platform open-source multimedia framework, player and server
 youtube-dl               # A small command-line program to download online videos
 # chromaprint-tools      # Chromaprint audio fingerprinting tools
 # gydl                   # GUI wrapper around youtube-dl program
 # darktable              # Utility to organize and develop raw images
-# gstreamer1*            # Issue 3 # GStreamer streaming media framework runtime
 # kid3                   # Efficient KDE ID3 tag editor
 # krita                  # Sketching and painting program
-# moc                    # music on console (needs a config-file, so run the following command) # echo "TiMidity_Config = /etc/timidity.cfg" >> .moc/config
-# obs-studio             # 
 # openshot               # replaced by kdenlive
 # openshot-lang          # replaced by kdenlive
+# moc                    # music on console (needs a config-file, so run the following command) # echo "TiMidity_Config = /etc/timidity.cfg" >> .moc/config
+# obs-studio             # Open Broadcaster Software
 # picard                 # MusicBrainz-based audio tagger
 
 ### Office
@@ -182,13 +186,13 @@ borgmatic                # Simple Python wrapper script for borgbackup
 # testdisk               # Tool to check and undelete partition, PhotoRec recovers lost files
 
 ### Science
+plantumlqeditor          # UML diagram Editor, latest plantuml version https://plantuml.com/de/download
 texlive-scheme-small     # small scheme (most used packages)
 # texlive-scheme-full    # full scheme (everything)
 # texworks               # A simple IDE for authoring TeX documents
 texstudio                # A complex IDE for authoring TeX documents
 tikzit                   # Diagram editor for pgf/TikZ
 texlive-plantuml         # PlantUML diagrams in (Lua)LaTeX
-plantumlqeditor          # UML diagram Editor, latest plantuml version https://plantuml.com/de/download
 # octave                 # A high-level language for numerical computations
 # R                      # A language for data analysis and graphics
 
@@ -215,7 +219,7 @@ git-all                  # Meta-package to pull in all git tools
 # diffuse                # Graphical tool for merging and comparing text files
 
 ### Monitoring
-# bashtop                # Linux resource monitor TODO: Not in F34
+bashtop                  # Linux resource monitor
 htop                     # Interactive process viewer
 iftop                    # Command line tool that displays bandwidth usage on an interface
 powertop                 # Power consumption monitor
@@ -250,7 +254,8 @@ NetworkManager-*         # Network connection manager and user applications
 ocl-icd                  # OpenCL Library (Installable Client Library) Bindings
 opencl-*                 # Useful OpenCL tools and utilities
 snapper                  # btrfs snapshots (https://dustymabe.com/2019/01/06/fedora-btrfs-snapper---the-fedora-29-edition/)
-python3-dnf-plugins-extras-snapper # 
+python3-dnf-plugin-local # Automatically copy all downloaded packages to a repository on the local filesystem and generating repo metadata.
+python3-dnf-plugins-extras-snapper #
 ssss                     # Shamir's secret sharing scheme
 syncthing                # P2P Synchronisation (https://syncthing.net/downloads/)
 vulkan*                  # Vulkan
@@ -278,6 +283,8 @@ dnf -y copr enable taw/element
 dnf -y install rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted --refresh
 # Signal Desktop as Flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub org.signal.Signal
+# Czkawka as Flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y com.github.qarmin.czkawka
 
 # dnf-automatic security upgrades
 # timer configuration: /etc/systemd/system/multi-user.target.wants/dnf-automatic.timer
