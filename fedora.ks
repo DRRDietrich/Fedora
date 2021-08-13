@@ -150,6 +150,10 @@ digikam                  # A digital camera accessing & photo management applica
 kdenlive                 # Non-linear video editor
 ffmpeg                   # Digital VCR and streaming server
 gimp                     # GNU Image Manipulation Program
+gimp-heif-plugin         # A plugin for loading and saving HEIF images
+gimp-jxl-plugin          # A plugin for loading and saving JPEG-XL images
+gimp-lensfun             # Gimp plugin to correct lens distortion
+gimp-resynthesizer       # Gimp plug-in for texture synthesis (magically repairing areas)
 gstreamer1*              # Issue 3 # GStreamer streaming media framework runtime
 gthumb                   # Image viewer, editor, organizer
 HandBrake                # An open-source multiplatform video transcoder
