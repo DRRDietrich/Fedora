@@ -150,6 +150,7 @@ digikam                  # A digital camera accessing & photo management applica
 kdenlive                 # Non-linear video editor
 ffmpeg                   # Digital VCR and streaming server
 gimp                     # GNU Image Manipulation Program
+gmic-gimp                # Must have gimp plugin
 gimp-heif-plugin         # A plugin for loading and saving HEIF images
 gimp-jxl-plugin          # A plugin for loading and saving JPEG-XL images
 gimp-lensfun             # Gimp plugin to correct lens distortion
@@ -296,6 +297,8 @@ dnf -y install nvidia-driver nvidia-settings
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub org.signal.Signal
 # Czkawka as Flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y com.github.qarmin.czkawka
+# Portfolio Performance
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y info.portfolio_performance.PortfolioPerformance
 
 # dnf-automatic security upgrades
 # timer configuration: /etc/systemd/system/multi-user.target.wants/dnf-automatic.timer
