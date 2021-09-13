@@ -266,6 +266,8 @@ python3-dnf-plugin-local # Automatically copy all downloaded packages to a repos
 python3-dnf-plugins-extras-snapper #
 ssss                     # Shamir's secret sharing scheme
 syncthing                # P2P Synchronisation (https://syncthing.net/downloads/)
+# usbguard               # The USBGuard software framework helps to protect your computer against rogue USB devices by implementing basic whitelisting/blacklisting capabilities based on USB device attributes.
+# usbguard-notifier      # Notifier for usbguard
 vulkan*                  # Vulkan
 # modem-manager-gui      # ModemManager GUI
 
@@ -325,6 +327,16 @@ email_to = root@localhost
 [base]
 debuglevel = 1' > /etc/dnf/automatic.conf;
 systemctl enable --now dnf-automatic.timer
+
+# usbguard configuration #
+# usbguard generate-policy > rules.conf
+# cp rules.conf /etc/usbguard/rules.conf
+# chmod 0600 /etc/usbguard/rules.conf
+# edit configuration #
+# vim /etc/usbguard/usbguard-daemon.conf
+# systemctl enable --now usbguard
+# enable notifier for user #
+# systemctl enable --now --user usbguard-notifier.service
 
 # For every user who wants to use Syncthing.
 # systemctl enable --now syncthing@USER.service
