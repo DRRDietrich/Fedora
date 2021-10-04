@@ -143,6 +143,7 @@ xorgxrdp                 # xorgxrdp is a set of X11 modules that make Xorg act a
 # transmission           # A lightweight GTK+ BitTorrent client. Does anyone still use torrents?
 
 ### Multimedia
+audacious		 # Audio Player (resource-saving)
 # audacity               # Multitrack audio editor
 audacity-freeworld       # Multitrack audio editor WITH mp3 support
 clementine               # A music player and library organizer
@@ -170,7 +171,7 @@ youtube-dl               # A small command-line program to download online video
 # krita                  # Sketching and painting program
 # openshot               # replaced by kdenlive
 # openshot-lang          # replaced by kdenlive
-# moc                    # music on console (needs a config-file, so run the following command) # echo "TiMidity_Config = /etc/timidity.cfg" >> .moc/config
+# moc                    # replaced by audacious; music on console (needs a config-file, so run the following command) # echo "TiMidity_Config = /etc/timidity.cfg" >> .moc/config
 # obs-studio             # Open Broadcaster Software
 # picard                 # MusicBrainz-based audio tagger
 
