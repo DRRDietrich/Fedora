@@ -182,6 +182,7 @@ libreoffice              # Free Software Productivity Suite
 # calibre                # E-book converter and library manager
 
 ### Virtualization
+guestfs-tools            # Tools to access and modify virtual machine disk images
 libvirt                  # Library providing a simple virtualization API
 spice-gtk                # High performance VM with OpenGL
 qemu                     # QEMU is a FAST! processor emulator
