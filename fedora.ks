@@ -76,8 +76,17 @@ gnome-terminal           # Terminal emulator for GNOME
 gnome-tweaks             # Customize advanced GNOME 3 options
 gnome-usage              # A GNOME app to view information about use of system resources
 gnome-weather            # A weather application for GNOME
+nemo                     # File manager with more options than nautilus. Fork of nautilus.
+nemo-audio-tab           # Audio tag information extension for Nemo
+nemo-compare             # Context menu comparison extension for nemo
+nemo-extensions          # Nemo extensions library
+nemo-fileroller          # File Roller extension for Nemo
+nemo-preview             # A quick previewer for Nemo
+nemo-python              # Python scripting extension for Nemo
+nemo-seahorse            # PGP encryption and signing for Nemo
+nemo-search-helpers      # Nemo search helpers
 seahorse                 # A GNOME application for managing encryption keys
-seahorse-nautilus        # PGP encryption and signing for nautilus
+# seahorse-nautilus      # PGP encryption and signing for nautilus
 seahorse-sharing         # Sharing of PGP public keys via DNS-SD and HKP
 soundconverter           # SoundConverter
 # geary                  # beautiful mail client, unfortunately without PGP support so far
@@ -303,6 +312,11 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y com.github.qarmin.czkawka
 # Portfolio Performance
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y info.portfolio_performance.PortfolioPerformance
+
+# Enable nemo as file manager (default: only available under cinnamon)
+sed -i '/OnlyShowIn=X-Cinnamon/I s/^/#/' /usr/share/applications/nemo.desktop
+# Set nemo as default file manager
+xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
 
 # dnf-automatic security upgrades
 # timer configuration: /etc/systemd/system/multi-user.target.wants/dnf-automatic.timer
