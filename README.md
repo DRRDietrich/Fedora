@@ -6,13 +6,11 @@ Kickstart installation of Fedora 35 with useful packages and RPMFusion, negativo
 
 https://download.fedoraproject.org/pub/fedora/linux/releases/35/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-35-1.2.iso
 
-### Download `Fedora Productivity 35 (Smart-Tux)`
+### Download `Fedora Productivity 35`
 
-**Available from November 1st, 2021**
+This is a custom Fedora Workstation livemedia containing all packages of the kickstart file. You can use it to try Fedora or to install it on your computer or a VM.
 
-This is a custom Fedora Workstation livemedia containing all packages of the kickstart file, except for `texlive-scheme-full` because of a lack of dependency. You can use it to try Fedora or to install it on your computer or a VM.
-
-https://smart-tux.de/files/Smart-Tux-35-x86_64.iso
+https://smart-tux.de/files/Fedora-Productivity-35.iso
 
 ### Grub Options
 
@@ -24,9 +22,7 @@ Press `Strg + x` to start the installer with kickstart configuration.
 
 ### System Requirements
 - 1,5 GB RAM
-- 18 GB free disk space
-- 5 GB to download (3,8 GB for 3091 PRMs + 1 GB for post-installation scripts) (As of today: 2021-06-22)
-(3,59 for 3146 PRMs, without HandBrake, HandBrake-gui, audacity-freeworld, bashtop, chromium-freeworld, element, exfat-utils, ffmpeg, gimp-heif-plugin, kdenlive, libaacs, libbdplus, libheif, simplescreenrecorder, vlc)
+- 30 GB free disk space
 
 ### List of additional packages
 
@@ -155,6 +151,7 @@ Press `Strg + x` to start the installer with kickstart configuration.
 | reptyr | Attach a running process to a new terminal |
 | screenfetch | like neofetch, but not as nice as neofetch, but with disk usage |
 | seahorse | A GNOME application for managing encryption keys |
+| sha3sum | SHA3 Hash |
 | signal | Signal Messenger |
 | simplescreenrecorder | Simple Screen Recorder is a screen recorder for Linux |
 | snapper | btrfs snapshots |

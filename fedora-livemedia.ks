@@ -400,7 +400,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # AusweisApp2
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub de.bund.ausweisapp.ausweisapp2
 # WhatsAppQT
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub org.kde.Platform//5.15 org.kde.Sdk//5.15 io.qt.qtwebengine.BaseApp//5.15
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub io.bit3.WhatsAppQT
 # Zoom
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub us.zoom.Zoom
 # Jabref
@@ -651,8 +651,8 @@ testdisk                 # Tool to check and undelete partition, PhotoRec recove
 
 ### Science
 plantumlqeditor          # UML diagram Editor, latest plantuml version https://plantuml.com/de/download
-texlive-scheme-small     # small scheme (most used packages)
-# texlive-scheme-full    # full scheme (everything) # Bug psutil
+# texlive-scheme-small     # small scheme (most used packages)
+texlive-scheme-full    # full scheme (everything) # Bug psutil
 # texworks               # A simple IDE for authoring TeX documents
 texstudio                # A complex IDE for authoring TeX documents
 tikzit                   # Diagram editor for pgf/TikZ
@@ -707,6 +707,7 @@ libbluray-utils          # Blu-ray Library
 
 
 # All Other
+sha3sum                  # SHA3 Hash
 icedtea-web              # Additional Java components for OpenJDK - Java Web Start implementation
 java-openjdk             # Java
 libtool                  # The GNU Portable Library Tool

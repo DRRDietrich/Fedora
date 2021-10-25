@@ -205,8 +205,8 @@ borgmatic                # Simple Python wrapper script for borgbackup
 
 ### Science
 plantumlqeditor          # UML diagram Editor, latest plantuml version https://plantuml.com/de/download
-texlive-scheme-small     # small scheme (most used packages)
-# texlive-scheme-full    # full scheme (everything)
+# texlive-scheme-small     # small scheme (most used packages)
+texlive-scheme-full    # full scheme (everything)
 # texworks               # A simple IDE for authoring TeX documents
 texstudio                # A complex IDE for authoring TeX documents
 tikzit                   # Diagram editor for pgf/TikZ
@@ -261,6 +261,7 @@ libbluray-utils          # Blu-ray Library
 
 
 # All Other
+sha3sum                  # SHA3 Hash
 icedtea-web              # Additional Java components for OpenJDK - Java Web Start implementation
 java-openjdk             # Java
 libtool                  # The GNU Portable Library Tool

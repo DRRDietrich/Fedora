@@ -391,7 +391,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # AusweisApp2
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub de.bund.ausweisapp.ausweisapp2
 # WhatsAppQT
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub org.kde.Platform//5.15 org.kde.Sdk//5.15 io.qt.qtwebengine.BaseApp//5.15
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub io.bit3.WhatsAppQT
 # Zoom
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub us.zoom.Zoom
 # Jabref
@@ -623,6 +623,7 @@ screenfetch
 seahorse
 seahorse-nautilus
 seahorse-sharing
+sha3sum
 shim
 shim-ia32
 simplescreenrecorder
@@ -636,7 +637,7 @@ syslinux
 terminator
 testdisk
 texlive-plantuml
-texlive-scheme-small
+texlive-scheme-full
 texstudio
 thunderbird
 tikzit
