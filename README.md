@@ -2,11 +2,11 @@
 
 Kickstart installation of Fedora 35 with useful packages and RPMFusion, negativo17 nvidia, dracut-crypt-ssh, keybase and element repositories.
 
-### Download Fedora 35 netinst ISO
+### Download Fedora netinst ISO
 
 https://download.fedoraproject.org/pub/fedora/linux/releases/35/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-35-1.2.iso
 
-### Download `Fedora Productivity 35`
+### Download `Fedora Productivity`
 
 This is a custom Fedora Workstation livemedia containing all packages of the kickstart file. You can use it to try Fedora or to install it on your computer or a VM.
 
