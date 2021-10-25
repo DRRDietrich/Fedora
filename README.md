@@ -10,7 +10,9 @@ https://download.fedoraproject.org/pub/fedora/linux/releases/35/Everything/x86_6
 
 This is a custom Fedora Workstation livemedia containing all packages of the kickstart file. You can use it to try Fedora or to install it on your computer or a VM.
 
-https://smart-tux.de/files/Fedora-Productivity-35.iso
+[https://smart-tux.de/files/Fedora-Productivity-35.iso](https://smart-tux.de/files/Fedora-Productivity-35.iso)[^1]
+
+[^1]: SHA3-256: 2d913dd0c7eda5c4 f9b2e4d8a23841d9 f587c083aca5191e 7b22c68ba6d96295
 
 ### Grub Options
 
