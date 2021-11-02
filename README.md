@@ -170,6 +170,7 @@ Press `Strg + x` to start the installer with kickstart configuration.
 | texstudio | A complex IDE for authoring TeX documents |
 | thunderbird | Mozilla Thunderbird mail/newsgroup client |
 | tikzit | Diagram editor for pgf/TikZ |
+| tldr | Simplified and community-driven man pages |
 | transmission | A lightweight GTK+ BitTorrent client. |
 | usbguard | The USBGuard software framework helps to protect your computer against rogue USB devices by implementing basic whitelisting/blacklisting capabilities based on USB device attributes |
 | vim-enhanced | A version of the VIM editor which includes recent enhancements |

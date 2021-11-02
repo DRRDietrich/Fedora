@@ -131,6 +131,7 @@ pamu2fcfg                # Configures PAM authentication over U2F
 pcsc-lite                # PC/SC Lite smart card framework and applications, like https://en.wikipedia.org/wiki/OpenPGP_card
 reptyr                   # Attach a running process to a new terminal
 terminator               # Multiple GNOME terminals in one window.
+tldr                     # Simplified and community-driven man pages
 vim-enhanced             # A version of the VIM editor which includes recent enhancements
 # baobab                 # A graphical directory tree analyzer
 # distribution-gpg-keys-copr # GPG keys for Copr projects

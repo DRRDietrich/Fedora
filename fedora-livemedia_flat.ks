@@ -641,6 +641,7 @@ texlive-scheme-full
 texstudio
 thunderbird
 tikzit
+tldr
 transmission
 usbguard
 usbguard-notifier
