@@ -41,7 +41,7 @@ clearpart --all --initlabel
 # rootpw rootme
 # Disk partitioning information
 reqpart
-part / --size=27000
+part / --size=30000
 
 %post
 # FIXME: it'd be better to get this installed from a package
@@ -719,6 +719,7 @@ NetworkManager-*         # Network connection manager and user applications
 ocl-icd                  # OpenCL Library (Installable Client Library) Bindings
 opencl-*                 # Useful OpenCL tools and utilities
 paperkey                 # OpenPGP key archiver
+playonlinux              # Graphical front-end for Wine
 snapper                  # btrfs snapshots (https://dustymabe.com/2019/01/06/fedora-btrfs-snapper---the-fedora-29-edition/)
 tldr                     # Simplified and community-driven man pages
 python3-dnf-plugin-local # Automatically copy all downloaded packages to a repository on the local filesystem and generating repo metadata.

@@ -12,7 +12,7 @@ This is a custom Fedora Workstation livemedia containing all packages of the kic
 
 [https://smart-tux.de/files/Fedora-Productivity-35.iso](https://smart-tux.de/files/Fedora-Productivity-35.iso)[^1]
 
-[^1]: SHA3-256: 2d913dd0c7eda5c4 f9b2e4d8a23841d9 f587c083aca5191e 7b22c68ba6d96295
+[^1]: SHA3-256: ce8396fe963652de 660695284e02cdd4 6eb6699c53c7632d 3eb4a66fdd903d53
 
 ### Grub Options
 
@@ -144,6 +144,7 @@ Press `Strg + x` to start the installer with kickstart configuration.
 | phoronix-test-suite | An Automated, Open-Source Testing Framework |
 | picard | MusicBrainz-based audio tagger |
 | plantumlqeditor | UML diagram Editor, latest plantuml version https://plantuml.com/de/download |
+| playonlinux | Graphical front-end for Wine |
 | powertop | Power consumption monitor |
 | python3-certbot-apache |  |
 | python3-dnf-plugin-local | Automatically copy all downloaded packages to a repository on the local filesystem and generating repo metadata |
