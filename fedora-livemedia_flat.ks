@@ -467,8 +467,6 @@ dnf -y install code
 @printing
 @sound-and-video
 @system-tools
-@workstation-product
-@workstation-product-environment
 HandBrake
 HandBrake-gui
 NetworkManager-*
@@ -514,13 +512,15 @@ evince
 evolution
 exfat-utils
 fdupes
-fedora-release-workstation
 ffmpeg
 filezilla
 firefox
 flatpak
 freerdp
 gedit
+generic-logos
+generic-release
+generic-release-notes
 gimp
 gimp-heif-plugin
 gimp-jxl-plugin
@@ -658,6 +658,9 @@ youtube-dl
 -@dial-up
 -@input-methods
 -@standard
+-fedora-logos
+-fedora-release
+-fedora-release-notes
 -gfs2-utils
 -reiserfs-utils
 

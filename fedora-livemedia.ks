@@ -467,9 +467,8 @@ dnf -y install code
 @multimedia
 @networkmanager-submodules
 @printing
-@workstation-product
-
-@workstation-product-environment
+#@workstation-product
+#@workstation-product-environment
 @admin-tools
 @container-management
 @development-tools
@@ -499,6 +498,12 @@ syslinux
 -@standard
 -gfs2-utils
 -reiserfs-utils
+-fedora-logos
+generic-logos
+-fedora-release
+generic-release
+-fedora-release-notes
+generic-release-notes
 
 ### Gnome
 alacarte                 # Menu editor for the GNOME desktop
@@ -551,7 +556,7 @@ dnf-automatic            # Package manager - automated upgrades
 dnf-plugin-system-upgrade  # System Upgrade Plugin for DNF
 exfat-utils              # Utilities for exFAT file system
 fdupes                   # Finds duplicate files in a given set of directories
-fedora-release-workstation # Base package for Fedora Workstation-specific default configurations
+# fedora-release-workstation # Base package for Fedora Workstation-specific default configurations
 flatpak                  # Application deployment framework for desktop apps
 keepassxc                # Cross-platform password manager
 langpacks-de             # German langpacks meta-package

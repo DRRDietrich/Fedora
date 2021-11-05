@@ -6,13 +6,13 @@ Kickstart installation of Fedora 35 with useful packages and RPMFusion, negativo
 
 https://download.fedoraproject.org/pub/fedora/linux/releases/35/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-35-1.2.iso
 
-### Download `Fedora Productivity`
+### Download `Prodora`
 
-This is a custom Fedora Workstation livemedia containing all packages of the kickstart file. You can use it to try Fedora or to install it on your computer or a VM.
+This is a Fedora Remix livemedia containing all packages of the kickstart file. You can use it to try the system or to install it on your computer or a VM.
 
-[https://smart-tux.de/files/Fedora-Productivity-35.iso](https://smart-tux.de/files/Fedora-Productivity-35.iso)[^1]
+[https://smart-tux.de/files/Prodora-35.iso](https://smart-tux.de/files/Prodora-35.iso)[^1]
 
-[^1]: SHA3-256: ce8396fe963652de 660695284e02cdd4 6eb6699c53c7632d 3eb4a66fdd903d53
+[^1]: SHA3-256: 8aa61c0f95ac012e 9043acebd7c8a7cc 9c66e43ed80a46df d2f25ecd969b47fa
 
 ### Grub Options
 
