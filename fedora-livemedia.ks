@@ -1,4 +1,4 @@
-#version=F35
+#version=Pro35
 # X Window System configuration information
 xconfig  --startxonboot
 # Keyboard layouts
@@ -10,7 +10,7 @@ timezone Europe/Berlin
 lang de_DE.UTF-8
 # Firewall configuration
 firewall --enabled --service=mdns
-url --url="https://dl.fedoraproject.org/pub/fedora/linux/development/35/Everything/x86_64/os/"
+url --url="https://dl.fedoraproject.org/pub/fedora/linux/releases/35/Everything/x86_64/os/"
 # Network information
 network  --bootproto=dhcp --device=link --activate
 
@@ -453,6 +453,27 @@ xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo
 dnf -y install code
+
+# Branding
+sed -i -e 's/Generic release/Prodora/g' /etc/fedora-release /etc/issue
+echo -e 'Prodora 35' > /etc/system-release
+echo -e 'NAME=Prodora
+VERSION="35 (Smart-Tux)"
+ID=prodora
+ID_LIKE=fedora
+VERSION_ID=35
+PRETTY_NAME="Prodora 35 (Smart-Tux)"
+ANSI_COLOR="0;34"
+LOGO=generic-logo-icon
+CPE_NAME="cpe:/o:smart-tux:prodora:35"
+HOME_URL="https://smart-tux.de/"
+SUPPORT_URL="https://smart-tux.de/kontakt"
+BUG_REPORT_URL="https://smart-tux.de/kontakt"
+REDHAT_BUGZILLA_PRODUCT="Generic"
+REDHAT_BUGZILLA_PRODUCT_VERSION=%{bug_version}
+REDHAT_SUPPORT_PRODUCT="Generic"
+REDHAT_SUPPORT_PRODUCT_VERSION=%{bug_version}
+PRIVACY_POLICY_URL="https://smart-tux.de/"' > /etc/os-release
 %end
 
 %packages
