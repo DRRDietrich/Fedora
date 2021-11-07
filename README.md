@@ -8,11 +8,11 @@ https://download.fedoraproject.org/pub/fedora/linux/releases/35/Everything/x86_6
 
 ### Download `Prodora`
 
-This is a Fedora Remix livemedia containing all packages of the kickstart file. You can use it to try the system or to install it on your computer or a VM.
+This is an encrypted Fedora Remix livemedia containing all packages of the kickstart file. You can use it to try the system or to install it on your computer or a VM.
 
 [https://smart-tux.de/files/Prodora-35.iso](https://smart-tux.de/files/Prodora-35.iso)[^1]
 
-[^1]: SHA3-256: 8aa61c0f95ac012e 9043acebd7c8a7cc 9c66e43ed80a46df d2f25ecd969b47fa
+[^1]: `SHA3-256: a462263f6d001b92 117af555f6a43cdd 2ad4dcdb247a52f0 425c61f817650265`
 
 ### Grub Options
 
