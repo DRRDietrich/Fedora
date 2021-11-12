@@ -617,6 +617,7 @@ xorgxrdp                 # xorgxrdp is a set of X11 modules that make Xorg act a
 
 ### Multimedia
 audacious		 # Audio Player (resource-saving)
+audacious-plugins-freeworld # MP3 & Co.
 # audacity               # Multitrack audio editor
 audacity-freeworld       # Multitrack audio editor WITH mp3 support
 clementine               # A music player and library organizer

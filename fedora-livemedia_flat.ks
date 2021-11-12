@@ -481,6 +481,7 @@ anaconda
 anaconda-live
 asciinema
 audacious
+audacious-plugins-freeworld
 audacity-freeworld
 backintime-qt
 baobab
