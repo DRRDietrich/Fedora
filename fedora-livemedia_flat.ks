@@ -392,7 +392,9 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # AusweisApp2
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub de.bund.ausweisapp.ausweisapp2
 # WhatsAppQT
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub io.bit3.WhatsAppQT
+# flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub io.bit3.WhatsAppQT
+# WhatsApp Youp
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub com.gigitux.youp
 # Zoom
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install -y flathub us.zoom.Zoom
 # Jabref
