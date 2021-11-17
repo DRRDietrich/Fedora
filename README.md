@@ -12,7 +12,7 @@ This is an encrypted Fedora Remix livemedia containing all packages of the kicks
 
 [https://smart-tux.de/files/Prodora-35.iso](https://smart-tux.de/files/Prodora-35.iso)[^1]
 
-[^1]: `SHA3-256: a462263f6d001b92 117af555f6a43cdd 2ad4dcdb247a52f0 425c61f817650265`
+[^1]: `SHA3-256: fa3592a3734bf80b 53e37fa38717224c 37594e9d8b445733 d19b9c75026fbf38`
 
 ### Grub Options
 
