@@ -545,29 +545,31 @@ nemo-audio-tab           # Audio tag information extension for Nemo
 nemo-compare             # Context menu comparison extension for nemo
 nemo-extensions          # Nemo extensions library
 nemo-fileroller          # File Roller extension for Nemo
+nemo-gsconnect           # Nemo smartphone integration
+webextension-gsconnect   # Webbrowser smartphone integration
 nemo-preview             # A quick previewer for Nemo
 nemo-python              # Python scripting extension for Nemo
 nemo-seahorse            # PGP encryption and signing for Nemo
 nemo-search-helpers      # Nemo search helpers
 seahorse                 # A GNOME application for managing encryption keys
-seahorse-nautilus      # PGP encryption and signing for nautilus
+seahorse-nautilus        # PGP encryption and signing for nautilus
 seahorse-sharing         # Sharing of PGP public keys via DNS-SD and HKP
 soundconverter           # SoundConverter
 # geary                  # beautiful mail client, unfortunately without PGP support so far
-gnome-books            # E-Book Manager
+gnome-books              # E-Book Manager
 # gnome-kiosk            # Single Application Mode for Gnome
-gnome-firmware         # Install firmware on devices
-gnome-maps             # Map application for GNOME
-gnome-todo             # Personal task manager for GNOME
-gparted                # Gnome Partition Editor
+gnome-firmware           # Install firmware on devices
+gnome-maps               # Map application for GNOME
+gnome-todo               # Personal task manager for GNOME
+gparted                  # Gnome Partition Editor
 
 ### Gnome Shell Extensions
 gnome-extensions-app                        # Manage GNOME Shell extensions
-gnome-shell-extension-background-logo       # Background logo extension for GNOME Shell
-gnome-shell-extension-system-monitor-applet # A Gnome shell system monitor extension
 gnome-shell-extension-apps-menu             # Application menu for GNOME Shell
-gnome-shell-extension-dash-to-dock          # Dash to Dock
+gnome-shell-extension-background-logo       # Background logo extension for GNOME Shell
+gnome-shell-extension-gsconnect             # Smartphone integration
 gnome-shell-extension-places-menu           # Places status menu for GNOME Shell
+gnome-shell-extension-system-monitor-applet # A Gnome shell system monitor extension
 
 ### Essential Tools
 age                      # Simple, modern and secure encryption tool

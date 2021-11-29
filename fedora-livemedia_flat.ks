@@ -545,7 +545,7 @@ gnome-maps
 gnome-online-accounts
 gnome-shell-extension-apps-menu
 gnome-shell-extension-background-logo
-gnome-shell-extension-dash-to-dock
+gnome-shell-extension-gsconnect
 gnome-shell-extension-places-menu
 gnome-shell-extension-system-monitor-applet
 gnome-terminal
@@ -599,6 +599,7 @@ nemo-audio-tab
 nemo-compare
 nemo-extensions
 nemo-fileroller
+nemo-gsconnect
 nemo-preview
 nemo-python
 nemo-seahorse
@@ -657,6 +658,7 @@ virt-manager
 virt-viewer
 vlc
 vulkan*
+webextension-gsconnect
 xorgxrdp
 xrdp
 youtube-dl
