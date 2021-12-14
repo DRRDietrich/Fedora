@@ -148,7 +148,7 @@ filezilla                # FTP, FTPS and SFTP client
 firefox                  # Mozilla Firefox Web browser
 freerdp                  # Free implementation of the Remote Desktop Protocol (RDP)
 remmina                  # Remote Desktop Client (For performance reasons, use `xfreerdp /rfx /gfx:RFX /u:USER /v:SERVER /multimon` instead)
-thunderbird              # Mozilla Thunderbird mail/newsgroup client
+# thunderbird            # Mozilla Thunderbird mail/newsgroup client, Obsolete due to numerous bugs in essential functions.
 xrdp                     # Open source remote desktop protocol (RDP) server
 xorgxrdp                 # xorgxrdp is a set of X11 modules that make Xorg act as a backend for xrdp.
 # keybase                # The Keybase Go client, filesystem, and GUI

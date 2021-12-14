@@ -647,7 +647,6 @@ testdisk
 texlive-plantuml
 texlive-scheme-full
 texstudio
-thunderbird
 tikzit
 tldr
 transmission
